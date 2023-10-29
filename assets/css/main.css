@@ -582,8 +582,13 @@ body {
     color: #fff;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   .main__infoblock {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main__subcount {
+    margin-bottom: 30px;
   }
 }
