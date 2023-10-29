@@ -581,8 +581,11 @@ body {
     font-size: 14px;
     color: #fff;
   }
+  .main__button {
+    font-size: 14px;
+  }
 }
-@media (max-width: 425px) {
+@media (max-width: 525px) {
   .main__infoblock {
     flex-direction: column;
     justify-content: center;
