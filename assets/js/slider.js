@@ -4,8 +4,10 @@ const sliderItems = document.querySelectorAll(".main__events__item");
 
 let currentSlide = 0;
 
+let itemWidth = document.querySelector(".main__events__item").offsetWidth;
+
 function getPosition(){
-	return currentSlide*-550;
+	return currentSlide*(-1)*itemWidth;
 }
 
 
