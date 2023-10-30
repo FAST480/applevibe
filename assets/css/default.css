@@ -192,3 +192,33 @@ body {
     top: 0;
   }
 }
+.footer {
+  padding: 20px 0;
+  background-color: #0F0F0F;
+}
+.footer__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__logo {
+  width: 180px;
+}
+.footer__logo img {
+  width: 100%;
+}
+.footer__socials {
+  display: flex;
+  align-items: center;
+}
+.footer__socials a {
+  display: inline-block;
+  margin-left: 10px;
+  width: 35px;
+}
+.footer__socials a:first-child {
+  margin-left: 0;
+}
+.footer__socials a img {
+  width: 100%;
+}

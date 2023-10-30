@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +7,9 @@
 	<link rel="stylesheet" href="assets/css/default.css">
 	<link rel="stylesheet" href="assets/css/news.css">
 	<link rel="stylesheet" href="assets/css/media.css">
-	<script src="assets/js/slider.js" defer></script>
 	<script src="assets/js/popup.js" defer></script>
 	<script src="assets/js/menu.js" defer></script>
+	<script src="assets/js/pagination.js" defer></script>
 </head>
 <body>
 	
@@ -44,69 +44,151 @@
 		<section class="newsMain">
 			<div class="container">
 				<div class="newsMain__body">
-					<div class="newsMain__item">
-						<div class="newsMain__item__img"><img src="assets/img/events/1.jpg" alt="1"></div>
-						<div class="newsMain__item__info">
-							<div class="newsMain__item__info__header">
-								<div class="newsMain__item__info__title">Название новости</div>
-								<div class="newsMain__item__info__views">
-									<img src="assets/img/icons/eye.svg" alt="eye">
-									<span>0</span>
+					<div class="newsMain__list">
+						<div class="newsMain__item">
+							<div class="newsMain__item__img"><img src="assets/img/events/1.jpg" alt="1"></div>
+							<div class="newsMain__item__info">
+								<div class="newsMain__item__info__header">
+									<div class="newsMain__item__info__title">Название новости1</div>
+									<div class="newsMain__item__info__views">
+										<img src="assets/img/icons/eye.svg" alt="eye">
+										<span>0</span>
+									</div>
+								</div>
+								<div class="newsMain__item__info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium metus sem, at maximus lorem volutpat eget. Maecenas sodales maximus sapien id sagittis. Pellentesque non imperdiet tellus. Praesent convallis lectus vitae massa ullamcorper, at viverra ipsum euismod. Nulla facilisi. Donec ullamcorper est eu nulla vulputate convallis. Integer convallis pellentesque est, ac feugiat ante volutpat eu. Nullam placerat, </div>
+								<div class="newsMain__item__info__footer">
+									<a href="#" class="newsMain__item__info__more">Подробнее</a>
+									<div class="newsMain__item__info__date">
+										<img src="assets/img/icons/icondate.svg" alt="date">
+										<span>26.10.2023</span>
+									</div>
 								</div>
 							</div>
-							<div class="newsMain__item__info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium metus sem, at maximus lorem volutpat eget. Maecenas sodales maximus sapien id sagittis. Pellentesque non imperdiet tellus. Praesent convallis lectus vitae massa ullamcorper, at viverra ipsum euismod. Nulla facilisi. Donec ullamcorper est eu nulla vulputate convallis. Integer convallis pellentesque est, ac feugiat ante volutpat eu. Nullam placerat, </div>
-							<div class="newsMain__item__info__footer">
-								<a href="#" class="newsMain__item__info__more">Подробнее</a>
-								<div class="newsMain__item__info__date">
-									<img src="assets/img/icons/icondate.svg" alt="date">
-									<span>26.10.2023</span>
+						</div>
+						<div class="newsMain__item">
+							<div class="newsMain__item__img"><img src="assets/img/events/2.jpg" alt="1"></div>
+							<div class="newsMain__item__info">
+								<div class="newsMain__item__info__header">
+									<div class="newsMain__item__info__title">Название новости2</div>
+									<div class="newsMain__item__info__views">
+										<img src="assets/img/icons/eye.svg" alt="eye">
+										<span>0</span>
+									</div>
+								</div>
+								<div class="newsMain__item__info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium metus sem, at maximus lorem volutpat eget. Maecenas sodales maximus sapien id sagittis. Pellentesque non imperdiet tellus. Praesent convallis lectus vitae massa ullamcorper, at viverra ipsum euismod. Nulla facilisi. Donec ullamcorper est eu nulla vulputate convallis. Integer convallis pellentesque est, ac feugiat ante volutpat eu. Nullam placerat, </div>
+								<div class="newsMain__item__info__footer">
+									<a href="#" class="newsMain__item__info__more">Подробнее</a>
+									<div class="newsMain__item__info__date">
+										<img src="assets/img/icons/icondate.svg" alt="date">
+										<span>26.10.2023</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="newsMain__item">
+							<div class="newsMain__item__img"><img src="assets/img/events/1.jpg" alt="1"></div>
+							<div class="newsMain__item__info">
+								<div class="newsMain__item__info__header">
+									<div class="newsMain__item__info__title">Название новости3</div>
+									<div class="newsMain__item__info__views">
+										<img src="assets/img/icons/eye.svg" alt="eye">
+										<span>0</span>
+									</div>
+								</div>
+								<div class="newsMain__item__info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium metus sem, at maximus lorem volutpat eget. Maecenas sodales maximus sapien id sagittis. Pellentesque non imperdiet tellus. Praesent convallis lectus vitae massa ullamcorper, at viverra ipsum euismod. Nulla facilisi. Donec ullamcorper est eu nulla vulputate convallis. Integer convallis pellentesque est, ac feugiat ante volutpat eu. Nullam placerat, </div>
+								<div class="newsMain__item__info__footer">
+									<a href="#" class="newsMain__item__info__more">Подробнее</a>
+									<div class="newsMain__item__info__date">
+										<img src="assets/img/icons/icondate.svg" alt="date">
+										<span>26.10.2023</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="newsMain__item">
+							<div class="newsMain__item__img"><img src="assets/img/events/1.jpg" alt="1"></div>
+							<div class="newsMain__item__info">
+								<div class="newsMain__item__info__header">
+									<div class="newsMain__item__info__title">Название новости4</div>
+									<div class="newsMain__item__info__views">
+										<img src="assets/img/icons/eye.svg" alt="eye">
+										<span>0</span>
+									</div>
+								</div>
+								<div class="newsMain__item__info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium metus sem, at maximus lorem volutpat eget. Maecenas sodales maximus sapien id sagittis. Pellentesque non imperdiet tellus. Praesent convallis lectus vitae massa ullamcorper, at viverra ipsum euismod. Nulla facilisi. Donec ullamcorper est eu nulla vulputate convallis. Integer convallis pellentesque est, ac feugiat ante volutpat eu. Nullam placerat, </div>
+								<div class="newsMain__item__info__footer">
+									<a href="#" class="newsMain__item__info__more">Подробнее</a>
+									<div class="newsMain__item__info__date">
+										<img src="assets/img/icons/icondate.svg" alt="date">
+										<span>26.10.2023</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="newsMain__item">
+							<div class="newsMain__item__img"><img src="assets/img/events/2.jpg" alt="1"></div>
+							<div class="newsMain__item__info">
+								<div class="newsMain__item__info__header">
+									<div class="newsMain__item__info__title">Название новости5</div>
+									<div class="newsMain__item__info__views">
+										<img src="assets/img/icons/eye.svg" alt="eye">
+										<span>0</span>
+									</div>
+								</div>
+								<div class="newsMain__item__info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium metus sem, at maximus lorem volutpat eget. Maecenas sodales maximus sapien id sagittis. Pellentesque non imperdiet tellus. Praesent convallis lectus vitae massa ullamcorper, at viverra ipsum euismod. Nulla facilisi. Donec ullamcorper est eu nulla vulputate convallis. Integer convallis pellentesque est, ac feugiat ante volutpat eu. Nullam placerat, </div>
+								<div class="newsMain__item__info__footer">
+									<a href="#" class="newsMain__item__info__more">Подробнее</a>
+									<div class="newsMain__item__info__date">
+										<img src="assets/img/icons/icondate.svg" alt="date">
+										<span>26.10.2023</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="newsMain__item">
+							<div class="newsMain__item__img"><img src="assets/img/events/1.jpg" alt="1"></div>
+							<div class="newsMain__item__info">
+								<div class="newsMain__item__info__header">
+									<div class="newsMain__item__info__title">Название новости6</div>
+									<div class="newsMain__item__info__views">
+										<img src="assets/img/icons/eye.svg" alt="eye">
+										<span>0</span>
+									</div>
+								</div>
+								<div class="newsMain__item__info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium metus sem, at maximus lorem volutpat eget. Maecenas sodales maximus sapien id sagittis. Pellentesque non imperdiet tellus. Praesent convallis lectus vitae massa ullamcorper, at viverra ipsum euismod. Nulla facilisi. Donec ullamcorper est eu nulla vulputate convallis. Integer convallis pellentesque est, ac feugiat ante volutpat eu. Nullam placerat, </div>
+								<div class="newsMain__item__info__footer">
+									<a href="#" class="newsMain__item__info__more">Подробнее</a>
+									<div class="newsMain__item__info__date">
+										<img src="assets/img/icons/icondate.svg" alt="date">
+										<span>26.10.2023</span>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="newsMain__item">
-						<div class="newsMain__item__img"><img src="assets/img/events/2.jpg" alt="1"></div>
-						<div class="newsMain__item__info">
-							<div class="newsMain__item__info__header">
-								<div class="newsMain__item__info__title">Название новости</div>
-								<div class="newsMain__item__info__views">
-									<img src="assets/img/icons/eye.svg" alt="eye">
-									<span>0</span>
-								</div>
-							</div>
-							<div class="newsMain__item__info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium metus sem, at maximus lorem volutpat eget. Maecenas sodales maximus sapien id sagittis. Pellentesque non imperdiet tellus. Praesent convallis lectus vitae massa ullamcorper, at viverra ipsum euismod. Nulla facilisi. Donec ullamcorper est eu nulla vulputate convallis. Integer convallis pellentesque est, ac feugiat ante volutpat eu. Nullam placerat, </div>
-							<div class="newsMain__item__info__footer">
-								<a href="#" class="newsMain__item__info__more">Подробнее</a>
-								<div class="newsMain__item__info__date">
-									<img src="assets/img/icons/icondate.svg" alt="date">
-									<span>26.10.2023</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="newsMain__item">
-						<div class="newsMain__item__img"><img src="assets/img/events/1.jpg" alt="1"></div>
-						<div class="newsMain__item__info">
-							<div class="newsMain__item__info__header">
-								<div class="newsMain__item__info__title">Название новости</div>
-								<div class="newsMain__item__info__views">
-									<img src="assets/img/icons/eye.svg" alt="eye">
-									<span>0</span>
-								</div>
-							</div>
-							<div class="newsMain__item__info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium metus sem, at maximus lorem volutpat eget. Maecenas sodales maximus sapien id sagittis. Pellentesque non imperdiet tellus. Praesent convallis lectus vitae massa ullamcorper, at viverra ipsum euismod. Nulla facilisi. Donec ullamcorper est eu nulla vulputate convallis. Integer convallis pellentesque est, ac feugiat ante volutpat eu. Nullam placerat, </div>
-							<div class="newsMain__item__info__footer">
-								<a href="#" class="newsMain__item__info__more">Подробнее</a>
-								<div class="newsMain__item__info__date">
-									<img src="assets/img/icons/icondate.svg" alt="date">
-									<span>26.10.2023</span>
-								</div>
-							</div>
-						</div>
+					<div class="newsMain__paginator">
+						<a href="#" class="newsMain__paginator__item active">1</a>
+<!-- 						<a href="#" class="news__paginator__item">2</a>
+						<a href="#" class="news__paginator__item active">3</a>
+						<a href="#" class="news__paginator__item">4</a>
+						<a href="#" class="news__paginator__item">5</a> -->
 					</div>
 				</div>
 			</div>
 		</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__body">
+					<a href="#" class="footer__logo"><img src="assets/img/textLogo.png" alt="logo"></a>
+					<div class="footer__socials">
+						<a href="#"><img src="assets/img/icons/tg.svg" alt="tg"></a>
+						<a href="#"><img src="assets/img/icons/yt.svg" alt="yt"></a>
+						<a href="#"><img src="assets/img/icons/vk.svg" alt="vk"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
 
 	</div>
 

@@ -30,8 +30,8 @@
   }
   .header__burger {
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     position: fixed;
     top: 20px;
     left: 20px;

@@ -5,9 +5,10 @@ const dotsItems = document.querySelectorAll(".main__events__dots__item");
 
 let currentSlide = 0;
 
-let itemWidth = document.querySelector(".main__events__item").offsetWidth;
+
 
 function getPosition(currentSlide){
+	let itemWidth = document.querySelector(".main__events__item").offsetWidth;
 	return currentSlide*(-1)*itemWidth;
 }
 

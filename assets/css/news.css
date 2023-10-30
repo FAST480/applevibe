@@ -1,4 +1,4 @@
-.newsMain__body {
+.newsMain__list {
   display: flex;
   flex-direction: column;
 }
@@ -73,4 +73,32 @@
 }
 .newsMain__item__info__date span {
   font-size: 14px;
+}
+.newsMain__paginator {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.newsMain__paginator__item {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  background: url(../img/icons/itempaginator.png) no-repeat top left / cover;
+}
+.newsMain__paginator__item.active {
+  position: relative;
+}
+.newsMain__paginator__item.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 2px;
+  bottom: -5px;
+  width: 95%;
+  height: 1px;
+  background-color: #FFB500;
 }
