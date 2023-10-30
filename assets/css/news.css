@@ -1,6 +1,10 @@
+.newsMain__listBlock {
+  overflow-y: hidden;
+}
 .newsMain__list {
   display: flex;
   flex-direction: column;
+  transition: transform 0.5s ease-out;
 }
 .newsMain__item {
   width: 100%;

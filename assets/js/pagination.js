@@ -1,3 +1,4 @@
+const newsBlock = document.querySelector(".newsMain__list");
 const newsItems = document.querySelectorAll(".newsMain__item");
 
 
@@ -7,38 +8,36 @@ const paginatorItem = document.querySelector(".newsMain__paginator__item");
 
 const maxOnPage = 3;
 let currentPage = 1;
+let blockHeight = (newsItems[0].offsetHeight+50)*maxOnPage;
 
 function startPaginator()
 {
 	createPaginatorItems();
-	hideAllNews();
-	for(let i = 0; i < 3; i++)
-	{
-		newsItems[i].style.display = "flex";
-	}
+	newsBlock.style.maxHeight = blockHeight + "px"
+	newsBlock.style.transform = "translateY(0px)";
 }
 
-function hideAllNews()
+
+function getPosition(page)
 {
-	newsItems.forEach((item)=>{
-		item.style.display = "none";
-	});
+	return (page-1)*blockHeight;
 }
 
 function toPage(page)
 {
-	hideAllNews();
-	
-	let lastItem = maxOnPage*page-1;
-	let firstItem = lastItem - maxOnPage + 1;
 
-	for(let i = lastItem; i >= firstItem; i--)
-	{
-		newsItems[i].style.display = "flex";
-
-	}
+	newsBlock.style.transform = "translateY(-"+getPosition(page)+"px)";
 
 	currentPage = page;
+
+	const topOffset = document.querySelector('.header').offsetHeight;
+    const elementPosition = newsBlock.parentNode.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - topOffset;
+
+    window.scrollBy({
+        top: offsetPosition,
+        behavior: 'smooth'
+    });
 
 	setActivePaginatorItem();
 }
@@ -69,7 +68,8 @@ paginatorItems.forEach((item)=>{
 		e.preventDefault();
 
 		let page = item.textContent;
-		toPage(page);
+		if(page != currentPage) toPage(page);
+		
 	});
 });
 
