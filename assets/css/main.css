@@ -24,6 +24,7 @@
 .main__events__list {
   height: 100%;
   display: flex;
+  align-items: center;
   transform: translateX(0);
   transition: transform .5s;
 }
