@@ -113,7 +113,6 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: url(../img/bgmain.jpg) no-repeat -100px -200px / cover, #000;
   width: 100vw;
-  min-height: 100vh;
   overflow-x: hidden;
 }
 .wrapper {
@@ -154,6 +153,7 @@ body {
   width: 104px;
   height: 52px;
   margin-right: 13px;
+  transition: all .5s;
 }
 .nav li a {
   font-family: 'Pixelify Sans', sans-serif;
@@ -164,8 +164,20 @@ body {
   line-height: 52px;
   text-align: center;
 }
+.nav li.active {
+  box-shadow: 0px 0px 10px 0px #f6b107;
+}
+.nav li.active a {
+  color: #aa7b09;
+}
+.nav li:hover {
+  box-shadow: 0px 0px 10px 0px #f6b107;
+}
+.nav li:hover a {
+  color: #aa7b09;
+}
 .pageLogo__body {
-  height: 100vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
