@@ -10,8 +10,7 @@ window.onload = () => {
 
 	const maxOnPage = 3;
 	let currentPage = 1;
-	let blockHeight = (newsItems[0].offsetHeight+50)*maxOnPage;
-	console.log(newsItems[0].scrollHeight);
+	let blockHeight = (newsItems[0].offsetHeight+49)*maxOnPage;
 
 	function startPaginator()
 	{

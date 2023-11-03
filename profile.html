@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AppleVibe</title>
+	<link rel="stylesheet" href="assets/css/default.css">
+	<link rel="stylesheet" href="assets/css/profile.css">
+	<link rel="stylesheet" href="assets/css/media.css">
+	<link rel="stylesheet" href="assets/css/profilemedia.css">
+	<script src="assets/js/popup.js" defer></script>
+</head>
+<body>
+	
+	<div class="wrapper">
+		
+		<section class="profile">
+			<div class="container">
+				<div class="profile__body">
+					<div class="profile__header">
+						<a href="/" class="profile__toMain"><img src="assets/img/icons/arrowBack.svg" alt="arrow"><span>На главную</span></a>
+						<div class="profile__user">
+							<div class="profile__user__name">Имя_пользователя</div>
+							<div class="profile__user__avatar"><img src="assets/img/avatars/av1.png" alt="av"></div>
+						</div>
+					</div>
+					<div class="profile__section">
+						<div class="profile__main">
+							<div class="profile__main__sub">
+								<div class="profile__main__sub__status">
+									<div class="profile__main__sub__status__info">
+										<p>Статус подписки:</p>
+										<div class="profile__main__sub__status__bar">Не активна</div>
+									</div>
+									<div class="profile__main__sub__status__date">Действует до 29.10.2023</div>
+								</div>
+								<div class="profile__main__sub__tariff">Выбранный тариф: <span>Отсутствует</span></div>
+							</div>
+							<div class="profile__main__tariffs">
+								<div class="profile__main__tariffs__title">Тарифы</div>
+								<div class="profile__main__tariffs__body">
+									<div class="profile__main__tariffs__body__item">
+										<div class="profile__main__tariffs__body__item__name">Основной</div>
+										<div class="profile__main__tariffs__body__item__info">
+											<p>-Ранний доступ к видеороликам</p>
+											<p>-Тех.поддержка</p>
+											<p>-Доступ к игровому серверу</p>
+											<p>-Эксклюзивный контент</p>
+											<p>-Скидка в магазине до 20%</p>
+											<p>-Скидка на творческие заказы до 10%</p>
+										</div>
+										<div class="profile__main__tariffs__body__item__cost">
+											<span>350₽/мес.</span>
+											<a href="#" class="profile__main__tariffs__body__item__buy">Купить</a>
+										</div>
+									</div>
+									<div class="profile__main__tariffs__body__item">
+										<div class="profile__main__tariffs__body__item__block">
+											<img src="assets/img/icons/break.png" alt="break">
+										</div>
+										<div class="profile__main__tariffs__body__item__name">Основной+</div>
+										<div class="profile__main__tariffs__body__item__info">
+											<p>-Ранний доступ к видеороликам</p>
+											<p>-Тех.поддержка</p>
+											<p>-Доступ к игровому серверу</p>
+											<p>-Эксклюзивный контент</p>
+											<p>-Скидка в магазине до 20%</p>
+											<p>-Скидка на творческие заказы до 10%</p>
+										</div>
+										<div class="profile__main__tariffs__body__item__cost">
+											<span>350₽/мес.</span>
+											<a class="profile__main__tariffs__body__item__buy">Купить</a>
+										</div>
+									</div>
+									<div class="profile__main__tariffs__body__item">
+										<div class="profile__main__tariffs__body__item__block">
+											<img src="assets/img/icons/break.png" alt="break">
+										</div>
+										<div class="profile__main__tariffs__body__item__name">Продвинутый</div>
+										<div class="profile__main__tariffs__body__item__info">
+											<p>-Ранний доступ к видеороликам</p>
+											<p>-Тех.поддержка</p>
+											<p>-Доступ к игровому серверу</p>
+											<p>-Эксклюзивный контент</p>
+											<p>-Скидка в магазине до 20%</p>
+											<p>-Скидка на творческие заказы до 10%</p>
+										</div>
+										<div class="profile__main__tariffs__body__item__cost">
+											<span>350₽/мес.</span>
+											<a class="profile__main__tariffs__body__item__buy">Купить</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="profile__sidebar">
+							<div class="profile__balance">
+								<div class="profile__balance__info">
+									<span>Баланс:</span>
+									<span>100.00 руб</span>
+								</div>
+								<a href="#" class="profile__balance__button">Пополнить</a>
+							</div>
+							<div class="profile__menu">
+								<ul class="profile__menu__list">
+									<li class="active"><a href="#">Подписка</a></li>
+									<li><a href="#">Мои покупки</a></li>
+									<li><a href="#">Настройки</a></li>
+								</ul>
+								<a href="#" class="profile__menu__promo" data-popup="popup__promo">Промокод</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<div class="popup popup__promo">
+		<div class="popup__bg"></div>
+		<div class="popup__block">
+			<div class="popup__close" data-popup="popup__login">
+				<span></span>
+				<span></span>
+			</div>
+			<div class="popup__title">Введите <span style="color: #FFB500">промокод</span> в поле ниже:</div>
+			<form class="popup__form" action="" method="post">
+				<div class="popup__form__input">
+					<input type="text" placeholder="Промокод">
+				</div>
+				<div class="popup__form__input">
+					<input type="submit" value="Активировать">
+				</div>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
