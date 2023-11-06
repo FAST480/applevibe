@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="assets/css/media.css">
 	<link rel="stylesheet" href="assets/css/profilemedia.css">
 	<script src="assets/js/popup.js" defer></script>
+	<script src="assets/js/menu.js" defer></script>
 </head>
 <body>
 	
@@ -17,11 +18,17 @@
 		<section class="profile">
 			<div class="container">
 				<div class="profile__body">
+					
 					<div class="profile__header">
 						<a href="/" class="profile__toMain"><img src="assets/img/icons/arrowBack.svg" alt="arrow"><span>На главную</span></a>
 						<div class="profile__user">
 							<div class="profile__user__name">Имя_пользователя</div>
 							<div class="profile__user__avatar"><img src="assets/img/avatars/av1.png" alt="av"></div>
+						</div>
+						<div class="profile__burgerInner" data-burger="profile">
+							<div class="profile__burger">
+								<span></span>
+							</div>
 						</div>
 					</div>
 					<div class="profile__section">
@@ -93,7 +100,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="profile__sidebar">
+						<div class="profile__sidebar" data-burgermenu="profile">
 							<div class="profile__balance">
 								<div class="profile__balance__info">
 									<span>Баланс:</span>
