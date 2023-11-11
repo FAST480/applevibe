@@ -125,7 +125,7 @@
 .profile__main__tariffs__title {
   text-align: center;
   color: #fff;
-  font-size: 16px;
+  font-size: 21px;
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 20px;
@@ -276,12 +276,121 @@
 .profile__menu__promo:hover {
   color: #FFB500;
 }
+.profile__title {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.profile__buys {
+  margin-top: 25px;
+}
+.profile__buys__list {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  grid-gap: 15px;
+}
+.profile__buys__item {
+  color: #fff;
+  max-width: 320px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #0E0E0E;
+}
+.profile__buys__item__img {
+  width: 100%;
+  height: 145px;
+  background: grey;
+}
+.profile__buys__item__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile__buys__item__title {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 10px 0 5px 0;
+}
+.profile__buys__item__description {
+  word-wrap: break-word;
+  font-size: 14px;
+  font-weight: 300;
+}
+.profile__buys__item__cost {
+  margin-top: 55px;
+  font-size: 18px;
+  text-align: center;
+}
+.profile__buys__item__btn {
+  display: inline-block;
+  width: 100%;
+  color: #fff;
+  background: #BD4141;
+  border-radius: 100px;
+  padding: 10px 30px;
+  text-align: center;
+  margin-top: 15px;
+}
+.profile__settings {
+  margin-top: 20px;
+}
+.profile__settings__row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.profile__settings__row:first-child {
+  margin-top: 0;
+}
+.profile__settings__title {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.profile__settings__form {
+  display: flex;
+  flex-direction: column;
+}
+.profile__settings__input {
+  color: #fff;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 10px 15px;
+  background: none;
+  border-radius: 100px;
+  border: 2px solid #FFB500;
+}
+.profile__settings__input[type=submit] {
+  background: #FFB500;
+  font-size: 16px;
+  font-weight: 400;
+}
+.profile__settings__input[type=file] {
+  border: 0;
+}
+.profile__settings__block {
+  display: flex;
+}
+.profile__settings__img {
+  width: 120px;
+  height: 120px;
+  background: grey;
+  margin-right: 15px;
+}
+.profile__settings__img img {
+  width: 10%;
+}
 .popup {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   z-index: 999;
   visibility: hidden;
 }
@@ -302,7 +411,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.88);
   opacity: 0;
   transition: all .2s linear;

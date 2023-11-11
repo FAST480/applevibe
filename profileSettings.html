@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AppleVibe</title>
+	<link rel="stylesheet" href="assets/css/default.css">
+	<link rel="stylesheet" href="assets/css/profile.css">
+	<link rel="stylesheet" href="assets/css/media.css">
+	<link rel="stylesheet" href="assets/css/profilemedia.css">
+	<script src="assets/js/popup.js" defer></script>
+	<script src="assets/js/menu.js" defer></script>
+</head>
+<body>
+	
+	<div class="wrapper">
+		
+		<section class="profile">
+			<div class="container">
+				<div class="profile__body">
+					
+					<div class="profile__header">
+						<a href="/" class="profile__toMain"><img src="assets/img/icons/arrowBack.svg" alt="arrow"><span>На главную</span></a>
+						<div class="profile__user">
+							<div class="profile__user__name">Имя_пользователя</div>
+							<div class="profile__user__avatar"><img src="assets/img/avatars/av1.png" alt="av"></div>
+						</div>
+						<div class="profile__burgerInner" data-burger="profile">
+							<div class="profile__burger">
+								<span></span>
+							</div>
+						</div>
+					</div>
+					<div class="profile__section">
+						<div class="profile__main">
+							<div class="profile__title">Настройки</div>
+							<div class="profile__settings">
+								<div class="profile__settings__row">
+									<div class="profile__settings__password">
+										<div class="profile__settings__title">Изменить пароль</div>
+										<form action="#" class="profile__settings__form">
+											<input type="text" class="profile__settings__input" placeholder="Старый пароль">
+											<input type="text" class="profile__settings__input" placeholder="Новый пароль">
+											<input type="submit" class="profile__settings__input" value="Изменить">
+										</form>
+									</div>
+									<div class="profile__settings__name">
+										<div class="profile__settings__title">Изменить имя</div>
+										<form action="#" class="profile__settings__form">
+											<input type="text" class="profile__settings__input" placeholder="Новое имя">
+											<input type="submit" class="profile__settings__input" value="Изменить">
+										</form>
+									</div>
+								</div>
+								<div class="profile__settings__row">
+									<div class="profile__settings__avatar">
+										<div class="profile__settings__title">Изменить пароль</div>
+										<div class="profile__settings__block">
+											<div class="profile__settings__img"></div>
+											<form action="#" class="profile__settings__form">
+												<input type="file" class="profile__settings__input" placeholder="Старый пароль">
+												<input type="submit" class="profile__settings__input" value="Изменить">
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="profile__sidebar" data-burgermenu="profile">
+							<div class="profile__balance">
+								<div class="profile__balance__info">
+									<span>Баланс:</span>
+									<span>100.00 руб</span>
+								</div>
+								<a href="#" class="profile__balance__button">Пополнить</a>
+							</div>
+							<div class="profile__menu">
+								<ul class="profile__menu__list">
+									<li class="active"><a href="#">Подписка</a></li>
+									<li><a href="#">Мои покупки</a></li>
+									<li><a href="#">Настройки</a></li>
+								</ul>
+								<a href="#" class="profile__menu__promo" data-popup="popup__promo">Промокод</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<div class="popup popup__promo">
+		<div class="popup__bg"></div>
+		<div class="popup__block">
+			<div class="popup__close" data-popup="popup__login">
+				<span></span>
+				<span></span>
+			</div>
+			<div class="popup__title">Введите <span style="color: #FFB500">промокод</span> в поле ниже:</div>
+			<form class="popup__form" action="" method="post">
+				<div class="popup__form__input">
+					<input type="text" placeholder="Промокод">
+				</div>
+				<div class="popup__form__input">
+					<input type="submit" value="Активировать">
+				</div>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
