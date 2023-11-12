@@ -201,6 +201,9 @@
   .profile__burger {
     width: 40px;
   }
+  .profile__buys__item{
+    max-width: 300px;
+  }
 }
 @media (max-width: 380px) {
   .profile__toMain {
