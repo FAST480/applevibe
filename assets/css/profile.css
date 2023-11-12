@@ -76,6 +76,9 @@
   padding: 25px;
   display: flex;
   flex-direction: column;
+  height: 85vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .profile__main__sub {
   display: flex;
@@ -383,7 +386,7 @@
   margin-right: 15px;
 }
 .profile__settings__img img {
-  width: 10%;
+  width: 100%;
 }
 .popup {
   position: fixed;
