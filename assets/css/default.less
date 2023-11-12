@@ -157,3 +157,41 @@ body{
 		}
 	}
 }
+
+
+
+.preloader{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #151515;
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: opacity .5s;
+	overflow: hidden;
+}
+.preloader__img{
+	background: url(../img/preloader.gif) no-repeat center / cover;
+	width: 150px;
+	height: 150px;
+}
+
+.preloader__text{
+	font-family: 'Pixelify Sans', sans-serif;
+	color: #fff;
+	font-size: 24px;
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
