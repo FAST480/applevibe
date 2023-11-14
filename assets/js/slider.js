@@ -1,14 +1,15 @@
-const sliderScrollBlock = document.querySelector(".main__events__list");
+const sliderScrollBlock = document.querySelector(".slider__scrollBlock");
 
-const sliderItems = document.querySelectorAll(".main__events__item");
-const dotsItems = document.querySelectorAll(".main__events__dots__item");
+const sliderItems = document.querySelectorAll(".slider__item");
+const dotsBlock = document.querySelector(".dots__block");
+
 
 let currentSlide = 0;
 
 
 
 function getPosition(currentSlide){
-	let itemWidth = document.querySelector(".main__events__item").offsetWidth;
+	let itemWidth = document.querySelector(".slider__item").offsetWidth;
 	return currentSlide*(-1)*itemWidth;
 }
 
@@ -22,6 +23,16 @@ function disactivateAllDots()
 function setDot(currentSlide){
 	disactivateAllDots();
 	dotsItems[currentSlide].classList.add("active");
+}
+
+function createSliderDots()
+{
+	for(let i = 1; i < sliderItems.length; i++)
+	{
+		let clone = document.querySelector(".dots__item").cloneNode(true);
+		clone.classList.remove("active");
+		dotsBlock.appendChild(clone);
+	}
 }
 
 
@@ -38,7 +49,8 @@ function nextSlide(){
 		setDot(currentSlide);
 	}
 }
-
+createSliderDots();
+const dotsItems = document.querySelectorAll(".dots__item");
 for(let i = 0; i < dotsItems.length; i++)
 {
 	dotsItems[i].addEventListener("click", ()=>{
@@ -49,4 +61,7 @@ for(let i = 0; i < dotsItems.length; i++)
 }
 
 
-let sliderTimer = setInterval(nextSlide, 6000);
+
+if(sliderScrollBlock.dataset.auto == "true") {
+	let sliderTimer = setInterval(nextSlide, 6000);
+}

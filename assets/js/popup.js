@@ -26,6 +26,7 @@ function closeAllPopUp(){
 	popups.forEach((popup)=>{
 		popup.classList.remove("active");
 		state = false;
+		document.body.style.overflow = "auto";
 	});
 }
 
@@ -35,6 +36,7 @@ function showPopup(popupclass){
 		if(popup.classList.contains(popupclass)){
 			popup.classList.add("active");
 			state = true;
+			document.body.style.overflow = "hidden";
 		}
 
 	});

@@ -1,5 +1,4 @@
 window.onload = function () {
-  console.log("work");
   window.setTimeout(function (){
   document.body.classList.add('loaded_hiding');
     window.setTimeout(function () {
