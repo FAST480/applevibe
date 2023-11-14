@@ -26,7 +26,7 @@ function closeAllPopUp(){
 	popups.forEach((popup)=>{
 		popup.classList.remove("active");
 		state = false;
-		document.body.style.overflow = "auto";
+		document.body.style.overflowY = "auto";
 	});
 }
 
