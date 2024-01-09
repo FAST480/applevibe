@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AppleVibe</title>
+	<link rel="stylesheet" href="assets/css/default.css">
+	<link rel="stylesheet" href="assets/css/profile.css">
+	<link rel="stylesheet" href="assets/css/media.css">
+	<link rel="stylesheet" href="assets/css/profilemedia.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/slick.css"/>
+	<script src="assets/js/popup.js" defer></script>
+	<script src="assets/js/menu.js" defer></script>
+	<script src="assets/js/preloader.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/slick.min.js"></script>
+	<script src="assets/js/slider.js" defer></script>
+</head>
+<body>
+	
+	<div class="preloader">
+		<div class="preloader__img"></div>
+		<div class="preloader__text">Подождите..</div>
+	</div>
+
+	<div class="wrapper">
+		
+		<header class="header">
+			<div class="container">
+				<div class="header__body">
+					<div class="header__burger" data-burger="index">
+						<span></span>
+					</div>
+					<ul class="nav" data-burgermenu="index">
+						<li class="active"><a href="/">Главная</a></li>
+						<li><a href="news.html">Новости</a></li>
+						<li><a href="#">Услуги</a></li>
+						<li><a href="#">Сервисы</a></li>
+						<li><a href="shop.html">Магазин</a></li>
+						<li><a href="#">Творчество</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<main class="recovery">
+			<div class="container">
+				<div class="recovery__body">
+					<div class="recovery__header">Восстановление аккаунта</div>
+					<div class="recovery__notice">Введите ваш логин, и мы отправим письмо с кодом подтверждения на адрес электронной почты, <span>указанный  при регистрации</span></div>
+					<form action="" class="recovery__form">
+						<div class="recovery__input">
+							<input type="text" name="username" placeholder="Логин">
+						</div>
+						<div class="recovery__input recovery__input--submit">
+							<input type="submit" name="username" value="Продолжить">
+						</div>
+						<div class="recovery__error">Пользователь с таким именем не найден</div>
+					</form>
+				</div>
+			</div>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__body">
+					<a href="/" class="footer__logo"><img src="assets/img/textLogo.png" alt="logo"></a>
+					<div class="footer__socials">
+						<a href="#"><img src="assets/img/icons/tg.svg" alt="tg"></a>
+						<a href="#"><img src="assets/img/icons/yt.svg" alt="yt"></a>
+						<a href="#"><img src="assets/img/icons/vk.svg" alt="vk"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<div class="popup popup__accessCode active">
+		<div class="popup__bg"></div>
+		<div class="popup__block">
+			<div class="popup__title">Подтверждение пользователя</div>
+			<div class="popup__text">Введите код подтверждения из <span>письма</span> в поле ниже:</div>
+			<form class="popup__form" action="/profile/auth" method="post">
+				<div class="popup__errors" style="color: red; text-align: center;"></div>
+				<div class="popup__form__input">
+					<input type="text" placeholder="Код подтверждения" name="code" minlength="6" maxlength="6" data-number required>
+				</div>
+				<div class="popup__form__input">
+					<input type="submit" value="Отправить">
+				</div>
+			</form>
+			<div class="popup__ques">Письмо всё ещё не пришло?<a href="#" class="popup__ques--reg">Отправить повторно</a></div>
+		</div>
+	</div>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			let post = document.querySelector("[data-number]");
+			post.addEventListener('keypress', e => {
+			  if(!/\d/.test(e.key))
+			    e.preventDefault();
+			});
+		});
+	</script>
+
+</body>
+</html>

@@ -8,10 +8,13 @@
 	<link rel="stylesheet" href="assets/css/shop.css">
 	<link rel="stylesheet" href="assets/css/media.css">
 	<link rel="stylesheet" href="assets/css/shopmedia.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/slick.css"/>
 	<script src="assets/js/preloader.js"></script>
 	<script src="assets/js/menu.js" defer></script>
-	<script src="assets/js/slider.js" defer></script>
 	<script src="assets/js/popup.js" defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/slick.min.js"></script>
+	<script src="assets/js/slider.js" defer></script>
 
 </head>
 <body>
@@ -46,20 +49,17 @@
 					<div class="shopItem__maininfo">
 						<div class="shopItem__maininfo__container">
 							<div class="shopItem__maininfo__slider">
-								<div class="shopItem__maininfo__slider__list slider__scrollBlock" data-auto="false">
-									<div class="shopItem__maininfo__slider__list__item slider__item">
+								<div class="shopItem__maininfo__slider__list">
+									<div class="shopItem__maininfo__slider__list__item">
 										<img src="assets/img/products/1.jpeg" alt="1">
 									</div>
-									<div class="shopItem__maininfo__slider__list__item slider__item">
+									<div class="shopItem__maininfo__slider__list__item">
 										<img src="assets/img/products/1-2.jpeg" alt="1">
 									</div>
-									<div class="shopItem__maininfo__slider__list__item slider__item">
+									<div class="shopItem__maininfo__slider__list__item">
 										<img src="assets/img/products/1-3.jpeg" alt="1">
 									</div>
 								</div>
-							</div>
-							<div class="shopItem__maininfo__slider__dots dots__block">
-								<div class="shopItem__maininfo__slider__dots__item active dots__item"></div>
 							</div>
 						</div>
 						
@@ -68,10 +68,10 @@
 							<div class="shopItem__maininfo__offer__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec neque leo, convallis ac malesuada vitae, sodales quis nisi. Maecenas id ex eget arcu elementum tincidunt. Suspendisse nulla diam, auctor nec justo id, eleifend suscipit ante. Curabitur ultricies volutpat orci, ac scelerisque odio condimentum id. Nulla commodo </div>
 							<div class="shopItem__maininfo__offer__costBlock">
 								<div class="shopItem__maininfo__offer__costBlock__upper">
-									<div class="shopItem__maininfo__offer__costBlock__subcost">
+									<a href="#" class="shopItem__maininfo__offer__costBlock__subcost" data-popup="popup__subAccess">
 										<p>79.99руб</p>
 										<span>с подпиской</span>
-									</div>
+									</a>
 									<div class="shopItem__maininfo__offer__costBlock__discost">
 										<p>99.99руб</p>
 										<span>89.99руб</span>
@@ -151,15 +151,82 @@
 					<input placeholder="+7" data-phone-pattern required>
 				</div>
 				<div class="popup__form__input">
+					<span class="popup__form__input__text">Ваше местоположение?</span>
+					<div class="poup__form__input__radio">
+						<div class="poup__form__input__radio__item"><input type="radio" id="radio1" name="radio" value="DNR" checked><label for="radio1">ДНР</label></div>
+						<div class="poup__form__input__radio__item"><input type="radio" id="radio2" name="radio" value="RF"><label for="radio2">РФ</label></div>
+					</div>
+				</div>
+				<div class="popup__form__input">
 					<span class="popup__form__input__text">Почтовый индекс</span>
 					<input type="text" placeholder="000000" maxlength="6" minlength="6" data-post required>
-					<a href="https://www.pochta.ru/indexes" target="_blank">узнать свой почтовый индекс</a>
+					<a href="https://www.pochta.ru/indexes" target="_blank" class="popup__form__input__postLink">узнать свой почтовый индекс</a>
 				</div>
-
+				<div class="popup__form__input">
+					<span class="popup__form__input__text__note">Доставка товаров действует только на территории РФ</span>
+				</div>
 				<div class="popup__form__input">
 					<input type="submit" value="Оформить покупку">
 				</div>
 			</form>
+		</div>
+	</div>
+
+	<div class="popup popup__subAccess">
+		<div class="popup__bg"></div>
+		<div class="popup__block">
+			<div class="popup__close" data-popup="popup__subAccess">
+				<span></span>
+				<span></span>
+			</div>
+			<div class="popup__offer">
+				<div class="popup__offer__header">Подписка уже оформлена!</div>
+				<div class="popup__offer__img"><img src="assets/img/icons/galka.svg" alt="ok"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup popup__sub">
+		<div class="popup__bg"></div>
+		<div class="popup__block">
+			<div class="popup__close" data-popup="popup__sub">
+				<span></span>
+				<span></span>
+			</div>
+			<div class="popup__title">Зачем нужна подписка?</div>
+			<div class="popup__offer">
+				<div class="popup__offer__enter">С оформленной подпиской вы получаете скидки абсолютно на все товары!</div>
+				<div class="popup__offer__list">
+					<div class="popup__offer__list__item">
+						<div class="popup__offer__list__item__img"><img src="assets/img/icons/listitem.svg" alt="list"></div>
+						<div class="popup__offer__list__item__text">В магазине до 20%</div>
+					</div>
+					<div class="popup__offer__list__item">
+						<div class="popup__offer__list__item__img"><img src="assets/img/icons/listitem.svg" alt="list"></div>
+						<div class="popup__offer__list__item__text">Творческие заказы до 10%</div>
+					</div>
+					<div class="popup__offer__list__item">
+						<div class="popup__offer__list__item__img"><img src="assets/img/icons/listitem.svg" alt="list"></div>
+						<div class="popup__offer__list__item__text">Ежемесячные события до 5%</div>
+					</div>
+				</div>
+				<a href="#" class="popup__offer__more">Подробнее о подписке</a>
+				<a href="#" class="popup__offer__button">Оформить подписку</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup popup__accessBuy">
+		<div class="popup__bg"></div>
+		<div class="popup__block">
+			<div class="popup__close" data-popup="popup__buyproduct">
+				<span></span>
+				<span></span>
+			</div>
+			<div class="popup__offer">
+				<div class="popup__offer__header">Подождите..</div>
+				<div class="popup__offer__img"><img src="assets/img/loading.gif" alt="load"></div>
+			</div>
 		</div>
 	</div>
 
@@ -197,6 +264,22 @@
 		      elem.addEventListener(ev, eventCalllback);
 		    }
 		  }
+
+		  const radioButtons = document.querySelectorAll(".poup__form__input__radio__item > input");
+		  const postIndexLink = document.querySelector(".popup__form__input__postLink");
+
+		  radioButtons.forEach((r) => {
+		  	r.addEventListener("change", () => {
+		  		if(r.value == "RF")
+		  		{
+		  			postIndexLink.setAttribute("href", "https://www.pochta.ru/indexes");
+		  		} else {
+		  			postIndexLink.setAttribute("href", "https://postdonbass.com/delivery");
+		  		}
+		  	});
+		  });
+
+
 		});
 	</script>
 

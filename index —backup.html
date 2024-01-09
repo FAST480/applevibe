@@ -8,13 +8,10 @@
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/media.css">
 	<link rel="stylesheet" href="assets/css/mainmedia.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/slick.css"/>
+	<script src="assets/js/slider.js" defer></script>
 	<script src="assets/js/popup.js" defer></script>
 	<script src="assets/js/menu.js" defer></script>
 	<script src="assets/js/preloader.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/js/slick.min.js"></script>
-	<script src="assets/js/slider.js" defer></script>
 </head>
 <body>
 	
@@ -24,15 +21,6 @@
 	</div>
 
 	<div class="wrapper">
-
-		<a href="/" class="accountIcon">
-			<div class="accountIcon__body">
-				<div class="accountIcon__img"><img src="assets/img/avatars/av1.png" alt="av"></div>
-				<div class="accountIcon__name">andrey1219</div>
-				<!-- <div class="accountIcon__img"><img src="assets/img/icons/key.svg" alt="av"></div>
-				<div class="accountIcon__name">Войти</div> -->
-			</div>
-		</a>
 		
 		<header class="header">
 			<div class="container">
@@ -42,11 +30,11 @@
 					</div>
 					<ul class="nav" data-burgermenu="index">
 						<li class="active"><a href="/">Главная</a></li>
-						<li class="notallowed"><a href="news.html">Новости</a></li>
-						<li class="notallowed"><a href="#">Услуги</a></li>
-						<li class="notallowed"><a href="#">Сервисы</a></li>
+						<li><a href="news.html">Новости</a></li>
+						<li><a href="#">Услуги</a></li>
+						<li><a href="#">Сервисы</a></li>
 						<li><a href="shop.html">Магазин</a></li>
-						<li class="notallowed"><a href="#">Творчество</a></li>
+						<li><a href="#">Творчество</a></li>
 					</ul>
 				</div>
 			</div>
@@ -57,25 +45,30 @@
 					<div class="main__offer">
 						<div class="main__title"><img src="assets/img/textLogo.png" alt="AppleVibe"></div>
 						<div class="main__eventsBlock">
-							<div class="main__eventsBlock__slider">
-								<div class="main__events__item">
-									<img src="assets/img/events/1.jpg" alt="1">
+							<div class="main__events">
+								<div class="main__events__list slider__scrollBlock" data-auto="true">
+									<div class="main__events__item slider__item">
+										<img src="assets/img/events/1.jpg" alt="1">
+									</div>
+									<div class="main__events__item slider__item">
+										<img src="assets/img/events/2.jpg" alt="2">
+									</div>
+									<div class="main__events__item slider__item">
+										<img src="assets/img/events/1.jpg" alt="1">
+									</div>
+									<div class="main__events__item slider__item">
+										<img src="assets/img/events/2.jpg" alt="2">
+									</div>
+									<div class="main__events__item slider__item">
+										<img src="assets/img/events/1.jpg" alt="1">
+									</div>
+									<div class="main__events__item slider__item">
+										<img src="assets/img/events/2.jpg" alt="2">
+									</div>
 								</div>
-								<div class="main__events__item">
-									<img src="assets/img/events/2.jpg" alt="2">
-								</div>
-								<div class="main__events__item">
-									<img src="assets/img/events/1.jpg" alt="1">
-								</div>
-								<div class="main__events__item">
-									<img src="assets/img/events/2.jpg" alt="2">
-								</div>
-								<div class="main__events__item">
-									<img src="assets/img/events/1.jpg" alt="1">
-								</div>
-								<div class="main__events__item">
-									<img src="assets/img/events/2.jpg" alt="2">
-								</div>
+							</div>
+							<div class="main__events__dots dots__block">
+								<div class="main__events__dots__item dots__item active"></div>
 							</div>
 						</div>
 						<div class="main__infoblock">
@@ -147,20 +140,6 @@
 			<div class="popup__ques">Аккаунт уже есть? <a href="#" class="popup__ques--reg" data-popup="popup__login">Войти</a></div>
 		</div>
 	</div>
-
-	<script type="text/javascript">
-		const notAllowedLinks = document.querySelectorAll(".notallowed");
-
-		notAllowedLinks.forEach((link)=>{
-
-			let div = document.createElement('div');
-			div.className = "notallowedText";
-			div.innerHTML = "<p>В разработке</p>";
-
-			link.append(div);
-
-		});
-	</script>
 
 </body>
 </html>

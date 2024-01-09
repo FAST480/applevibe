@@ -14,7 +14,6 @@
 	<script src="assets/js/preloader.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/slick.min.js"></script>
-	<script src="assets/js/slider.js" defer></script>
 </head>
 <body>
 	
@@ -24,15 +23,6 @@
 	</div>
 
 	<div class="wrapper">
-
-		<a href="/" class="accountIcon">
-			<div class="accountIcon__body">
-				<div class="accountIcon__img"><img src="assets/img/avatars/av1.png" alt="av"></div>
-				<div class="accountIcon__name">andrey1219</div>
-				<!-- <div class="accountIcon__img"><img src="assets/img/icons/key.svg" alt="av"></div>
-				<div class="accountIcon__name">Войти</div> -->
-			</div>
-		</a>
 		
 		<header class="header">
 			<div class="container">
@@ -42,11 +32,11 @@
 					</div>
 					<ul class="nav" data-burgermenu="index">
 						<li class="active"><a href="/">Главная</a></li>
-						<li class="notallowed"><a href="news.html">Новости</a></li>
-						<li class="notallowed"><a href="#">Услуги</a></li>
-						<li class="notallowed"><a href="#">Сервисы</a></li>
+						<li><a href="news.html">Новости</a></li>
+						<li><a href="#">Услуги</a></li>
+						<li><a href="#">Сервисы</a></li>
 						<li><a href="shop.html">Магазин</a></li>
-						<li class="notallowed"><a href="#">Творчество</a></li>
+						<li><a href="#">Творчество</a></li>
 					</ul>
 				</div>
 			</div>
@@ -58,22 +48,22 @@
 						<div class="main__title"><img src="assets/img/textLogo.png" alt="AppleVibe"></div>
 						<div class="main__eventsBlock">
 							<div class="main__eventsBlock__slider">
-								<div class="main__events__item">
+								<div class="main__events__item slider__item">
 									<img src="assets/img/events/1.jpg" alt="1">
 								</div>
-								<div class="main__events__item">
+								<div class="main__events__item slider__item">
 									<img src="assets/img/events/2.jpg" alt="2">
 								</div>
-								<div class="main__events__item">
+								<div class="main__events__item slider__item">
 									<img src="assets/img/events/1.jpg" alt="1">
 								</div>
-								<div class="main__events__item">
+								<div class="main__events__item slider__item">
 									<img src="assets/img/events/2.jpg" alt="2">
 								</div>
-								<div class="main__events__item">
+								<div class="main__events__item slider__item">
 									<img src="assets/img/events/1.jpg" alt="1">
 								</div>
-								<div class="main__events__item">
+								<div class="main__events__item slider__item">
 									<img src="assets/img/events/2.jpg" alt="2">
 								</div>
 							</div>
@@ -148,19 +138,17 @@
 		</div>
 	</div>
 
-	<script type="text/javascript">
-		const notAllowedLinks = document.querySelectorAll(".notallowed");
 
-		notAllowedLinks.forEach((link)=>{
-
-			let div = document.createElement('div');
-			div.className = "notallowedText";
-			div.innerHTML = "<p>В разработке</p>";
-
-			link.append(div);
-
-		});
-	</script>
-
+ <script type="text/javascript">
+    $(document).ready(function(){
+      $('.main__eventsBlock__slider').slick({
+        	autoplay: true,
+        	autoplaySpeed: 2500,
+        	arrows: false,
+        	dots: true,
+        	dotsClass: "main__events__dots",
+      });
+    });
+  </script>
 </body>
 </html>

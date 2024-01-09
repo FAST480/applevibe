@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Панель управления</title>
+	<link rel="stylesheet" href="assets/css/admin.css">
+	<link rel="stylesheet" href="assets/css/adminmedia.css">
+	<script src="assets/js/menu.js" defer></script>
+	<script src="assets/js/adminPoup.js" defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="assets/js/ajax.js"></script>
+</head>
+<body>
+	
+	<div class="wrapper">
+		
+		<div class="aside" data-burgermenu="adminindex">
+			<a class="aside__logo">AppleVibe</a>
+			<ul class="aside__menu">
+				<li><a href="#">Пользователи</a></li>
+				<li><a href="#">Видеоролики</a></li>
+				<li><a href="#">Новости</a></li>
+				<li><a href="AdminOrders.html">Заказы</a></li>
+				<li><a href="#">События</a></li>
+			</ul>
+		</div>
+
+		<header class="header">
+			<div class="header__burger" data-burger="adminindex">
+				<span></span>
+			</div>
+		</header>
+
+		<main class="main">
+			<div class="main__title">Пользователь: Андрей Ващук</div>
+			<div class="main__blockMain">
+				<div class="main__userInfo">
+					<div class="main__userInfo__img"><img src="assets/img/avatars/av1.png" alt="av"></div>
+					<div class="main__userInfo__textBlock">
+						<div class="main__userInfo__textBlock__item">
+							<div class="main__userInfo__textBlock__title">Идентификатор:</div>
+							<div class="main__userInfo__textBlock__value">1</div>
+						</div>
+						<div class="main__userInfo__textBlock__item">
+							<div class="main__userInfo__textBlock__title">Электронная почта:</div>
+							<div class="main__userInfo__textBlock__value">vashchukandrey@gmail.com</div>
+						</div>
+						<div class="main__userInfo__textBlock__item">
+							<div class="main__userInfo__textBlock__title">Дата регистрации:</div>
+							<div class="main__userInfo__textBlock__value">20.11.23</div>
+						</div>
+						<div class="main__userInfo__textBlock__item">
+							<div class="main__userInfo__textBlock__title">Статус подписки:</div>
+							<div class="main__userInfo__textBlock__value">имеется</div>
+						</div>
+						<div class="main__userInfo__textBlock__item">
+							<div class="main__userInfo__textBlock__title">Тариф:</div>
+							<div class="main__userInfo__textBlock__value">Основной</div>
+						</div>
+						<div class="main__userInfo__textBlock__item">
+							<div class="main__userInfo__textBlock__title">Дата окончания:</div>
+							<div class="main__userInfo__textBlock__value">20.12.23</div>
+						</div>
+						<div class="main__userInfo__textBlock__item">
+							<div class="main__userInfo__textBlock__title">Баланс:</div>
+							<div class="main__userInfo__textBlock__value">100.00руб</div>
+						</div>
+						<div class="main__userInfo__textBlock__item">
+							<div class="main__userInfo__textBlock__title">Группа:</div>
+							<div class="main__userInfo__textBlock__value">Пользователь</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__userActions">
+					<div class="main__userActions__title">Действия с пользователем</div>
+					<div class="main__userActions__buttons">
+						<div class="main__userActions__buttons__main">
+							<a href="/admin/user/delete/1" class="main__userActions__buttons__item" data-access>Выдать подписку</a>
+							<a href="#" class="main__userActions__buttons__item main__userActions__buttons__item--red" data-access>Удалить</a>
+						</div>
+						<a href="/admin/user/giveadm/1" class="main__userActions__buttons__item" data-access>Выдать права администратора</a>
+					</div>
+				</div>
+			</div>
+		</main>
+
+	</div>
+
+
+	<div class="popup__delete popup__main">
+		<div class="popup__deleteBlock">
+			<div class="popup__deleteBlock__question">Вы подтверждаете выполнение данного действия?</div>
+			<div class="popup__deleteBlock__buttons">
+				<a href="#" class="popup__deleteBlock__buttons--delete">Да</a>
+				<a href="#" class="popup__deleteBlock__buttons--cancel">Нет, я передумал</a>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+</body>
+</html>

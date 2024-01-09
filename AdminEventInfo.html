@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Панель управления</title>
+	<link rel="stylesheet" href="assets/css/admin.css">
+	<link rel="stylesheet" href="assets/css/adminmedia.css">
+	<script src="assets/js/menu.js" defer></script>
+	<script src="assets/js/adminPoup.js" defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="assets/js/ajax.js"></script>
+</head>
+<body>
+	
+	<div class="wrapper">
+		
+		<div class="aside" data-burgermenu="adminindex">
+			<a class="aside__logo">AppleVibe</a>
+			<ul class="aside__menu">
+				<li><a href="#">Пользователи</a></li>
+				<li><a href="#">Видеоролики</a></li>
+				<li><a href="#">Новости</a></li>
+				<li><a href="AdminOrders.html">Заказы</a></li>
+				<li><a href="#">События</a></li>
+			</ul>
+		</div>
+
+		<header class="header">
+			<div class="header__burger" data-burger="adminindex">
+				<span></span>
+			</div>
+		</header>
+
+		<main class="main">
+			<div class="main__title">Заказ №1</div>
+			<div class="main__blockMain">
+				<div class="eventInfo">
+					<div class="eventInfo__members">
+						<div class="eventInfo__members__title">
+							<h4>Список участников</h4>
+							<span>Имя на сайте:игровой ник</span>
+						</div>
+						<div class="eventInfo__members__all">Всего: 0</div>
+						<ol class="eventInfo__members__list">
+							<li>andrey1219:pegasus</li>
+							<li>andrey1219:pegasus</li>
+							<li>andrey1219:pegasus</li>
+							<li>andrey1219:pegasus</li>
+							<li>andrey1219:pegasus</li>
+						</ol>
+					</div>
+					<div class="eventInfo__event">
+						<div class="eventInfo__event__title">Информация о событии</div>
+						<div class="eventInfo__event__img"><img src="assets/img/events/1.jpg" alt="event"></div>
+						<div class="eventInfo__event__name">Название: Кровавое похождение</div>
+						<div class="eventInfo__event__startdate">Дата начала: 24.12.23</div>
+						<div class="eventInfo__event__enddate">Дата окончания: 24.01.24</div>
+						<div class="eventInfo__event__buttons">
+							<a href="#">Изменить</a>
+							<a href="#" class="eventInfo__event__buttons--del">Удалить</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</main>
+
+	</div>
+
+
+	<div class="popup__delete popup__main">
+		<div class="popup__deleteBlock">
+			<div class="popup__deleteBlock__question">Вы подтверждаете выполнение данного действия?</div>
+			<div class="popup__deleteBlock__buttons">
+				<a href="#" class="popup__deleteBlock__buttons--delete">Да</a>
+				<a href="#" class="popup__deleteBlock__buttons--cancel">Нет, я передумал</a>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>s

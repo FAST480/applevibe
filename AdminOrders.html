@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Панель управления</title>
+	<link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+	
+	<div class="wrapper">
+		
+		<div class="aside">
+			<a href="index.html" class="aside__logo">AppleVibe</a>
+			<ul class="aside__menu">
+				<li><a href="#">Пользователи</a></li>
+				<li><a href="#">Видеоролики</a></li>
+				<li><a href="#">Новости</a></li>
+				<li><a href="orders.html">Заказы</a></li>
+				<li><a href="#">События</a></li>
+			</ul>
+		</div>
+
+		<main class="main">
+			<div class="main__title">Заказы</div>
+			<div class="main__blockMain">
+				<div class="main__upperline">
+					<form class="main__searchBox">
+						<div class="main__searchBox--input"><input type="text" placeholder="Поиск"></div>
+						<button class="main__searchBox--btn">Найти</button>
+					</form>
+					<div class="main__filters">
+						<div class="main__filters__button">Фильтры</div>
+						<div class="main__filters__menu">
+							<div class="main__filters__menu--item">Выполненные</div>
+							<div class="main__filters__menu--item">В разраб.</div>
+							<div class="main__filters__menu--item">Ждёт выполн.</div>
+						</div>
+					</div>
+					<div class="main__count">Всего заказов: 0</div>
+				</div>
+				<div class="orders__gridBlock">
+					<a href="/admin/orders/<?=$ord['id']?>" class="orders__gridBlock__item">
+						<div class="orders__gridBlock__item__img">
+							<img src="/template/img/products/<?=$image?>" alt="1">
+							<div class="orders__gridBlock__item__img__new">Новый</div>
+							<div class="orders__gridBlock__item__img__status">В оформлении</div>
+							<div class="orders__gridBlock__item__img__sub"><img src="/template/img/icons/gapple.svg" alt="g"></div>
+						</div>
+						<div class="orders__gridBlock__item__info">
+							<div class="orders__gridBlock__item__title">Заказик</div>
+							<div class="orders__gridBlock__item__label">Заказчик: заказчик</div>
+							<div class="orders__gridBlock__item__label">Дата заказа: дата</div>
+						</div>
+					</a>
+				</div>
+				<div class="main__paginator">
+					<a href="#" class="main__paginator__item">1</a>
+					<a href="#" class="main__paginator__item">2</a>
+					<a href="#" class="main__paginator__item">3</a>
+					<a href="#" class="main__paginator__item">4</a>
+					<a href="#" class="main__paginator__item">5</a>
+				</div>
+			</div>
+			</div>
+		</main>
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Панель управления</title>
+	<link rel="stylesheet" href="assets/css/admin.css">
+	<link rel="stylesheet" href="assets/css/adminmedia.css">
+	<script src="assets/js/menu.js" defer></script>
+	<script src="assets/js/adminFeatures.js" defer></script>
+</head>
+<body>
+	
+	<div class="wrapper">
+		
+		<div class="aside" data-burgermenu="adminindex">
+			<a class="aside__logo">AppleVibe</a>
+			<ul class="aside__menu">
+				<li><a href="#">Пользователи</a></li>
+				<li><a href="#">Видеоролики</a></li>
+				<li><a href="#">Новости</a></li>
+				<li><a href="AdminOrders.html">Заказы</a></li>
+				<li><a href="#">События</a></li>
+			</ul>
+		</div>
+
+		<header class="header">
+			<div class="header__burger" data-burger="adminindex">
+				<span></span>
+			</div>
+		</header>
+
+		<main class="main">
+			<div class="main__title">Новое событие</div>
+			<div class="main__blockMain">
+				<form action="#" method="post" class="addEvent">
+					<div class="addEvent__info">
+						<div class="addEvent__info__inputBlock">
+							<span>Название</span>
+							<input type="text" name="name" placeholder="Название" required>
+						</div>
+						<div class="addEvent__info__inputBlock">
+							<span>Тип</span>
+							<div class="addEvent__info__inputBlock--select">
+								<select name="type" id="eventType" required>
+									<option value="Событие">Событие</option>
+									<option value="Реклама">Реклама</option>
+								</select>
+							</div>
+						</div>
+						<div class="addEvent__info__inputBlock addEvent__info__inputBlock--textarea">
+							<span>Описание</span>
+							<textarea placeholder="Описание" name="description"></textarea>
+						</div>
+						<div class="addEvent__info__dates">
+							<div class="addEvent__info__inputBlock">
+								<span>Дата начала</span>
+								<input type="text" name="startdate" placeholder="00.00.00">
+							</div>
+							<div class="addEvent__info__inputBlock">
+								<span>Дата окончания</span>
+								<input type="text" name="enddate" placeholder="00.00.00">
+							</div>
+						</div>
+						<div class="addEvent__info__buttons">
+							<input type="submit" name="submit" value="Соханить">
+							<a href="#">Отмена</a>
+						</div>
+					</div>
+					<div class="addEvent__images">
+						<div class="addEvent__images__mainimg">
+							<span>Основное изображение</span>
+							<div class="addEvent__info__inputBlock--files">
+								<img src="assets/img/events/noneimg.jpg" alt="none">
+								<input type="file" name="mainimg" required>
+							</div>
+						</div>
+						<div class="addEvent__images__gallery">
+							<div class="addEvent__images__gallery__title">
+								<span>Изображения галереи</span>
+								<input type="file" name="gallery">
+							</div>
+							<div class="addEvent__images__gallery__grid">
+								<img src="assets/img/events/noneimg.jpg" alt="n">
+								<img src="assets/img/events/noneimg.jpg" alt="n">
+								<img src="assets/img/events/noneimg.jpg" alt="n">
+								<img src="assets/img/events/noneimg.jpg" alt="n">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</main>
+
+	</div>
+
+
+	<script>
+		const select = document.querySelector("#eventType");
+		const dates = document.querySelectorAll(".addEvent__info__dates > .addEvent__info__inputBlock > input");
+		const gallery = document.querySelector(".addEvent__images__gallery");
+		const descr = document.querySelector(".addEvent__info__inputBlock--textarea");
+		select.addEventListener("change", function(){
+			if(select.value = "Реклама")
+			{
+				dates.forEach((date)=>{
+					date.setAttribute("disabled", "disabled");
+				});
+			}
+		});
+	</script>
+
+</body>
+</html>

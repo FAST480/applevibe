@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="assets/css/profilemedia.css">
 	<script src="assets/js/popup.js" defer></script>
 	<script src="assets/js/menu.js" defer></script>
+	<script src="assets/js/adminPopup.js" defer></script>
 </head>
 <body>
 	
@@ -58,7 +59,7 @@
 										</div>
 										<div class="profile__main__tariffs__body__item__cost">
 											<span>350₽/мес.</span>
-											<a href="#" class="profile__main__tariffs__body__item__buy">Купить</a>
+											<a href="#" class="profile__main__tariffs__body__item__buy profile__main__tariffs__body__item__buy--bought" data-access>Купить</a>
 										</div>
 									</div>
 									<div class="profile__main__tariffs__body__item">
@@ -140,6 +141,16 @@
 					<input type="submit" value="Активировать">
 				</div>
 			</form>
+		</div>
+	</div>
+
+	<div class="popup__delete popup__main">
+		<div class="popup__deleteBlock">
+			<div class="popup__deleteBlock__question">Вы подтверждаете выполнение данного действия?</div>
+			<div class="popup__deleteBlock__buttons">
+				<a href="#" class="popup__deleteBlock__buttons--delete">Да</a>
+				<a href="#" class="popup__deleteBlock__buttons--cancel">Нет, я передумал</a>
+			</div>
 		</div>
 	</div>
 

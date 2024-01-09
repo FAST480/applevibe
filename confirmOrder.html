@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AppleVibe</title>
+	<link rel="stylesheet" href="assets/css/default.css">
+	<link rel="stylesheet" href="assets/css/shop.css">
+	<link rel="stylesheet" href="assets/css/media.css">
+	<link rel="stylesheet" href="assets/css/shopmedia.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/slick.css"/>
+	<script src="assets/js/popup.js" defer></script>
+	<script src="assets/js/menu.js" defer></script>
+	<script src="assets/js/preloader.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/slick.min.js"></script>
+	<script src="assets/js/slider.js" defer></script>
+</head>
+<body>
+	
+	<div class="preloader">
+		<div class="preloader__img"></div>
+		<div class="preloader__text">Подождите..</div>
+	</div>
+
+	<div class="wrapper">
+		
+		<header class="header">
+			<div class="container">
+				<div class="header__body">
+					<div class="header__burger" data-burger="index">
+						<span></span>
+					</div>
+					<ul class="nav" data-burgermenu="index">
+						<li class="active"><a href="/">Главная</a></li>
+						<li><a href="news.html">Новости</a></li>
+						<li><a href="#">Услуги</a></li>
+						<li><a href="#">Сервисы</a></li>
+						<li><a href="shop.html">Магазин</a></li>
+						<li><a href="#">Творчество</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<main class="confirmMain">
+			<div class="container">
+				<div class="confirmMain__body">
+					<form class="confirmMain__info">
+						<div class="confirmMain__info__item">
+							<div class="confirmMain__info__item__name">Категория: </div>
+							<div class="confirmMain__info__item__value">Канцелярия</div>
+						</div>
+						<div class="confirmMain__info__item">
+							<div class="confirmMain__info__item__name">Название: </div>
+							<div class="confirmMain__info__item__value">Тетрадь школьная, клетка, 16л</div>
+						</div>
+						<div class="confirmMain__info__item">
+							<div class="confirmMain__info__item__name">Кол-во товаров: </div>
+							<div class="confirmMain__info__item__value">1</div>
+						</div>
+						<div class="confirmMain__info__item">
+							<div class="confirmMain__info__item__name">Цена за шт.: </div>
+							<div class="confirmMain__info__item__value">99.9руб</div>
+						</div>
+						<div class="confirmMain__info__item confirmMain__info__item--discount">
+							<div class="confirmMain__info__item__name">Скидка: </div>
+							<div class="confirmMain__info__item__value">20%(20руб) активна подписка</div>
+						</div>
+						<div class="confirmMain__info__item confirmMain__info__item--big">
+							<div class="confirmMain__info__item__name">Итоговая стоимость: </div>
+							<div class="confirmMain__info__item__value">79.99руб</div>
+						</div>
+
+						<div class="confirmMain__info__item--checkbox">
+							<input type="checkbox" name="agree" id="agree-checkbox">
+							<label for="agree-checkbox">Я соглашаюсь с <a href="#">пользовательским соглашением, политикой конфиденциальности</a> и даю согласие на обработку данных</label>
+						</div>
+
+						<input type="submit" class="confirmMain__info__item__button" value="Оформить заказ" disabled>
+					</form>
+					<div class="confirmMain__image">
+						<img src="assets/img/products/1-3.jpeg" alt="">
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__body">
+					<a href="/" class="footer__logo"><img src="assets/img/textLogo.png" alt="logo"></a>
+					<div class="footer__socials">
+						<a href="#"><img src="assets/img/icons/tg.svg" alt="tg"></a>
+						<a href="#"><img src="assets/img/icons/yt.svg" alt="yt"></a>
+						<a href="#"><img src="assets/img/icons/vk.svg" alt="vk"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+
+	<script>
+		const checkbox = document.querySelector("#agree-checkbox");
+		const button = document.querySelector(".confirmMain__info__item__button");
+		checkbox.addEventListener("change", ()=>{
+			if(checkbox.checked)
+			{
+				button.removeAttribute("disabled");
+			}
+			else{
+				button.setAttribute("disabled", "disabled");
+			}
+		});
+	</script>
+
+</body>
+</html>

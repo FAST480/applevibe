@@ -33,9 +33,37 @@
 					</div>
 					<div class="profile__section">
 						<div class="profile__main">
-							<div class="profile__title">Настройки</div>
-							<div class="profile__settings">
-								<a href="#" class="profile__settings__button">Удалить аккаунт</a>							
+							<div class="profile__title">Аккаунт</div>
+							<div class="profile__change">
+								<form action="#" method="post" class="profile__change__form">
+									<div class="profile__change__dflex">
+										<div class="profile__change__column">
+											<div class="profile__change__inputBlock">
+												<span>Имя пользователя</span>
+												<input type="text" name="name" placeholder="Имя пользователя">
+											</div>
+											<div class="profile__change__inputBlock">
+												<span>Игровой ник</span>
+												<input type="text" name="nickname" placeholder="Игровой ник">
+											</div>
+										</div>
+										<div class="profile__change__column">
+											<div class="profile__change__inputBlock">
+												<span>Электронная почта</span>
+												<input type="email" name="email" placeholder="Электронная почта">
+											</div>
+											<div class="profile__change__inputBlock">
+												<span>Номер телефона</span>
+												<input type="text" name="name" placeholder="Номер телефона">
+											</div>
+										</div>
+									</div>
+									<div class="profile__change__buttons">
+										<span>Ошибка</span>
+										<input type="submit" value="Сохранить">
+										<a href="#" class="profile__change__buttons__cancel">Отмена</a>
+									</div>
+								</form>
 							</div>
 						</div>
 						<div class="profile__sidebar" data-burgermenu="profile">

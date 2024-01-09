@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Панель управления</title>
+	<link rel="stylesheet" href="assets/css/admin.css">
+	<link rel="stylesheet" href="assets/css/adminmedia.css">
+	<script src="assets/js/menu.js" defer></script>
+	<script src="assets/js/adminPoup.js" defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="assets/js/ajax.js"></script>
+</head>
+<body>
+	
+	<div class="wrapper">
+		
+		<div class="aside" data-burgermenu="adminindex">
+			<a class="aside__logo">AppleVibe</a>
+			<ul class="aside__menu">
+				<li><a href="#">Пользователи</a></li>
+				<li><a href="#">Видеоролики</a></li>
+				<li><a href="#">Новости</a></li>
+				<li><a href="AdminOrders.html">Заказы</a></li>
+				<li><a href="#">События</a></li>
+			</ul>
+		</div>
+
+		<header class="header">
+			<div class="header__burger" data-burger="adminindex">
+				<span></span>
+			</div>
+		</header>
+
+		<main class="main">
+			<div class="main__title">Заказ №1</div>
+			<div class="main__blockMain">
+				<form action="#" method="post" class="main__orderForm">
+					<div class="main__orderInfo">
+						<div class="main__orderInfo__img"><img src="assets/img/products/1-2.jpeg" alt="1"></div>
+						<div class="main__orderInfo__offer">
+							<div class="main__orderInfo__offer__order">
+								<div class="main__orderInfo__offer__title">Информация о заказе</div>
+								<div class="main__orderInfo__offer__info">
+									<div class="main__orderInfo__offer__info__item">
+										<div class="main__orderInfo__offer__info__item__title">Заказчик:</div>
+										<div class="main__orderInfo__offer__info__item__value">andrey1219 <span style="color: #FFB500">активна подписка</span></div>
+									</div>
+									<div class="main__orderInfo__offer__info__item">
+										<div class="main__orderInfo__offer__info__item__title">Полное имя:</div>
+										<div class="main__orderInfo__offer__info__item__value">Ващук Андрей Александрович</div>
+									</div>
+									<div class="main__orderInfo__offer__info__item">
+										<div class="main__orderInfo__offer__info__item__title">Телефон:</div>
+										<div class="main__orderInfo__offer__info__item__value">+7(121) 241-24-21</div>
+									</div>
+									<div class="main__orderInfo__offer__info__item">
+										<div class="main__orderInfo__offer__info__item__title">Территория проживания:</div>
+										<div class="main__orderInfo__offer__info__item__value">РФ</div>
+									</div>
+									<div class="main__orderInfo__offer__info__item">
+										<div class="main__orderInfo__offer__info__item__title">Почтовый индекс:</div>
+										<div class="main__orderInfo__offer__info__item__value">123123</div>
+									</div>
+									<div class="main__orderInfo__offer__info__item">
+										<div class="main__orderInfo__offer__info__item__title">Дата покупки:</div>
+										<div class="main__orderInfo__offer__info__item__value">22.12.23</div>
+									</div>
+								</div>
+							</div>
+							<div class="main__orderInfo__offer__product">
+								<div class="main__orderInfo__offer__title">Информация о товаре</div>
+								<div class="main__orderInfo__offer__info">
+									<div class="main__orderInfo__offer__info__item">
+										<div class="main__orderInfo__offer__info__item__title">Название:</div>
+										<div class="main__orderInfo__offer__info__item__value">Тетрадь 12л</div>
+									</div>
+									<div class="main__orderInfo__offer__info__item">
+										<div class="main__orderInfo__offer__info__item__title">Количество:</div>
+										<div class="main__orderInfo__offer__info__item__value">10</div>
+									</div>
+									<div class="main__orderInfo__offer__info__item main__orderInfo__offer__info__item--endcost">
+										<div class="main__orderInfo__offer__info__item__title">Итоговая стоимость:</div>
+										<div class="main__orderInfo__offer__info__item__value">298.9руб</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="main__orderStatus">
+						<div class="main__orderStatus__label">Статус заказа:</div>
+						<div class="main__orderStatus__select">
+							<select name="orderStatus" id="status">
+								<option value="1">В обработке</option>
+								<option value="2">Принят</option>
+								<option value="3">Отклонён</option>
+								<option value="4">В пути</option>
+								<option value="5">Доставлен</option>
+							</select>
+						</div>
+					</div>
+					<div class="main__orderActions">
+						<input type="submit" name="submit" value="Сохранить">
+						<a href="#">Отмена</a>
+					</div>
+				</form>
+			</div>
+		</main>
+
+	</div>
+
+
+	<div class="popup__delete popup__main">
+		<div class="popup__deleteBlock">
+			<div class="popup__deleteBlock__question">Вы подтверждаете выполнение данного действия?</div>
+			<div class="popup__deleteBlock__buttons">
+				<a href="#" class="popup__deleteBlock__buttons--delete">Да</a>
+				<a href="#" class="popup__deleteBlock__buttons--cancel">Нет, я передумал</a>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script>
+		const mediaQuery = window.matchMedia('(max-width: 540px)');
+		const orderIMG = document.querySelector(".main__orderInfo__img");
+		if (mediaQuery.matches) {
+		  orderIMG.style.height = orderIMG.offsetWidth + "px";
+		  console.log(orderIMG.offsetWidth);
+		}
+	</script>	
+
+</body>
+</html>s
