@@ -24,6 +24,27 @@
 			}
 		}
 	}
+
+	.nav li.notallowed{
+		.notallowedText{	
+			p{
+				font-family: 'Pixelify Sans', sans-serif;
+				font-size: 10px;
+				text-align: center;
+				line-height: 40px;
+			}
+		}
+	}
+	.accountIcon{
+		top: 35px;
+	}
+	.accountIcon__img{
+		width: 40px;
+		height: 40px;
+	}
+	.accountIcon__name{
+		font-size: 14px;
+	}
 }
 
 
@@ -36,7 +57,16 @@
 	.container{
 		max-width: 960px;
 	}
-
+	.accountIcon__body{
+		flex-direction: column;
+		padding: 10px;
+	}
+	.accountIcon__name{
+		margin: 10px 0 0 0 ;
+	}
+	.accountIcon{
+		top: 25px;
+	}
 }
 
 
@@ -44,6 +74,10 @@
 {
 	.container{
 		max-width: 720px;
+	}
+
+	.header{
+		z-index: 1;
 	}
 
 	.header__burger{
@@ -133,6 +167,18 @@
 	}
 	.pageLogo__body{
 		height: 300px;
+	}
+
+	.accountIcon__body{
+		flex-direction: row-reverse;
+		padding: 10px 20px;
+	}
+	.accountIcon__name{
+		margin: 0px 10px 0 0 ;
+	}
+	.accountIcon{
+		top: 30px;
+		z-index: 998;
 	}
 }
 

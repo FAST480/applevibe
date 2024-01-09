@@ -32,5 +32,10 @@ window.addEventListener("scroll", ()=>{
 		{
 			menu.classList.remove("active");
 		}
+		else if(menu.dataset.burgermenu == "adminindex" && menu.classList.contains("active"))
+		{
+			menu.classList.remove("active");
+		}
 	});
+
 });

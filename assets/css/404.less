@@ -1,0 +1,38 @@
+.main{
+	height: 100vh;
+}
+.container{
+	height: 100%;
+}
+.main__body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+.main__404img {
+	width: 280px;
+	img{
+		width: 100%;
+	}
+}
+.main__404text {
+	font-family: 'Raleway', sans-serif;
+	font-size: 26px;
+	font-weight: 600;
+	color: #fff;
+	a{
+		color: #FFB500;
+		text-decoration: underline;
+	}
+}
+
+@media(max-width: 620px)
+{
+	.main__404img{
+		display: none;
+	}
+	.main__404text{
+		text-align: center;
+	}
+}

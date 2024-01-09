@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
+  max-width: 100%;
 }
 .shopMain__item {
   display: block;
@@ -15,11 +16,24 @@
 }
 .shopMain__item__img {
   width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
 }
 .shopMain__item__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.shopMain__item__img__status {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  display: block;
+  padding: 5px;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 5px;
 }
 .shopMain__item__title {
   margin-top: 5px;
@@ -46,6 +60,7 @@
 }
 .shopMain__item__cost__sub span {
   font-size: 12px;
+  white-space: nowrap;
 }
 .shopMain__item__cost__old {
   color: #676767;
@@ -75,15 +90,20 @@
   align-items: start;
 }
 .shopItem__maininfo__container {
-  flex: 0 0 500px;
+  width: 500px;
 }
 .shopItem__maininfo__slider {
+  width: 100%;
+}
+.slick-list {
   border-radius: 10px;
   overflow: hidden;
 }
-.shopItem__maininfo__slider__list {
-  display: flex;
-  transition: transform .5s;
+.slick-slide {
+  height: 500px !important;
+}
+.slick-slide img {
+  height: 500px;
 }
 .shopItem__maininfo__slider__list__item {
   flex: 0 0 500px;
@@ -99,18 +119,30 @@
   justify-content: center;
   align-items: center;
 }
-.shopItem__maininfo__slider__dots__item {
+.shopItem__maininfo__slider__dots__item:last-child {
+  margin-right: 0;
+}
+.shopItem__maininfo__slider__dots__item.active {
+  background: #fff;
+}
+.shopItem__maininfo__slider__dots li button {
+  display: block;
   width: 10px;
   height: 10px;
   border-radius: 100%;
   border: 1px solid #fff;
   margin-right: 5px;
+  font-size: 0;
+  background: none;
   cursor: pointer;
 }
-.shopItem__maininfo__slider__dots__item:last-child {
+.shopItem__maininfo__slider__dots li {
+  margin-right: 5px;
+}
+.shopItem__maininfo__slider__dots li:last-child {
   margin-right: 0;
 }
-.shopItem__maininfo__slider__dots__item.active {
+.shopItem__maininfo__slider__dots li.slick-active button {
   background: #fff;
 }
 .shopItem__maininfo__offer {
@@ -139,6 +171,9 @@
   align-items: center;
 }
 .shopItem__maininfo__offer__costBlock__subcost {
+  cursor: pointer;
+  display: block;
+  color: #fff;
   background: #FFB500;
   padding: 10px;
   border-radius: 5px;
@@ -203,12 +238,79 @@
 .shopItem__fulldescription {
   margin-top: 20px;
 }
+.confirmMain {
+  padding: 250px 0 200px 0;
+}
+.confirmMain__body {
+  color: #fff;
+  padding: 35px;
+  background: #151515;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.confirmMain__info {
+  flex: 0 0 50%;
+}
+.confirmMain__info__item {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.confirmMain__info__item__name {
+  font-weight: 600;
+}
+.confirmMain__info__item__value {
+  margin-left: 5px;
+}
+.confirmMain__info__item--big {
+  font-size: 20px;
+  margin: 20px 0 20px 0;
+}
+.confirmMain__info__item--discount .confirmMain__info__item__value {
+  color: #FFB500;
+}
+.confirmMain__info__item--checkbox {
+  margin: 25px 0;
+  display: flex;
+  align-items: start;
+}
+.confirmMain__info__item--checkbox label {
+  margin-left: 10px;
+}
+.confirmMain__info__item--checkbox label a {
+  color: #fff;
+  text-decoration: underline;
+}
+.confirmMain__info__item__button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  background: #FFB500;
+  border: 1px solid #FFB500;
+  border-radius: 100px;
+  padding: 18px 45px;
+  cursor: pointer;
+}
+.confirmMain__info__item__button:disabled {
+  background: none;
+  cursor: not-allowed;
+}
+.confirmMain__image {
+  flex: 1 1 auto;
+}
+.confirmMain__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .popup {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   z-index: 999;
   visibility: hidden;
 }
@@ -235,7 +337,11 @@
   transition: all .2s linear;
   visibility: hidden;
 }
-.popup__block {
+.popup__sub .popup__block {
+  padding: 20px 40px;
+  max-width: 420px;
+}
+.popup__buyproduct .popup__block {
   background: #151515;
   display: block;
   max-width: 515px;
@@ -248,7 +354,7 @@
   transition: all .3s linear;
   visibility: hidden;
 }
-.popup__close {
+.popup__buyproduct .popup__close {
   width: 15px;
   height: 15px;
   cursor: pointer;
@@ -256,7 +362,7 @@
   top: 15px;
   right: 20px;
 }
-.popup__close span {
+.popup__buyproduct .popup__close span {
   position: absolute;
   top: 50%;
   left: 0;
@@ -266,10 +372,10 @@
   background: #FFB500;
   transform: rotate(45deg);
 }
-.popup__close span:last-child {
+.popup__buyproduct .popup__close span:last-child {
   transform: rotate(-45deg);
 }
-.popup__title {
+.popup__buyproduct .popup__title {
   color: #FFF;
   text-align: center;
   font-family: Raleway;
@@ -277,28 +383,29 @@
   font-weight: 700;
   text-transform: none;
 }
-.popup__form__input {
+.popup__buyproduct .popup__form__input {
   width: 100%;
   display: flex;
   flex-direction: column;
   margin-top: 10px;
 }
-.popup__form__input a {
+.popup__buyproduct .popup__form__input a {
   text-align: center;
   font-size: 14px;
   font-weight: 300;
   color: #737373;
   text-decoration: underline;
 }
-.popup__form__input:first-child {
+.popup__buyproduct .popup__form__input:first-child {
   margin-top: 40px;
 }
-.popup__form__input:first-child input {
+.popup__buyproduct .popup__form__input:first-child input {
   width: 70px;
   font-weight: 300;
   border-radius: 10px;
+  margin-top: 5px;
 }
-.popup__form__input input {
+.popup__buyproduct .popup__form__input input {
   width: 100%;
   font-size: 14px;
   font-family: 'Montserrat', sans-serif;
@@ -310,7 +417,7 @@
   color: #fff;
   padding: 12px 15px;
 }
-.popup__form__input input[type=submit] {
+.popup__buyproduct .popup__form__input input[type=submit] {
   width: 66.6%;
   display: block;
   background: #FFB500;
@@ -318,10 +425,106 @@
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
-  margin: 25px auto 0 auto;
+  margin: 10px auto 0 auto;
 }
-.popup__form__input__text {
+.popup__buyproduct .popup__form__input__text {
   font-size: 16px;
   font-weight: 500;
   color: #fff;
+}
+.popup__buyproduct .popup__form__input__text__note {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+  opacity: .7;
+}
+.popup__buyproduct .poup__form__input__radio {
+  display: flex;
+  justify-content: space-between;
+}
+.popup__buyproduct .poup__form__input__radio__item {
+  display: flex;
+  align-items: center;
+}
+.popup__buyproduct .poup__form__input__radio__item label {
+  color: #FFF;
+  margin-left: 10px;
+}
+.popup__offer {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+}
+.popup__offer__enter {
+  margin: 25px 0 30px 0;
+}
+.popup__offer__list__item {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.popup__offer__list__item:first-child {
+  margin-top: 0;
+}
+.popup__offer__list__item__img {
+  width: 30px;
+  margin-right: 10px;
+}
+.popup__offer__list__item__img img {
+  width: 100%;
+}
+.popup__offer__more {
+  text-decoration: underline;
+  margin-top: 15px;
+  color: #fff;
+}
+.popup__offer__button {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  padding: 10px 23px;
+  background: #FFB500;
+  border-radius: 100px;
+  align-self: center;
+}
+.popup__accessBuy .popup__offer {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.popup__accessBuy .popup__offer__header {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+.popup__accessBuy .popup__offer__img {
+  width: 50px;
+  height: 50px;
+}
+.popup__accessBuy .popup__offer__img img {
+  width: 100%;
+  height: 100%;
+}
+.popup__subAccess .popup__offer {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.popup__subAccess .popup__offer__header {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+.popup__subAccess .popup__offer__img {
+  width: 50px;
+  height: 50px;
+}
+.popup__subAccess .popup__offer__img img {
+  width: 100%;
+  height: 100%;
 }

@@ -59,7 +59,7 @@
 	&__avatar{
 		width: 45px;
 		height: 45px;
-		border-radius: 100%;
+		border-radius: 10px;
 		background: #D9D9D9;
 		overflow: hidden;
 		img{
@@ -116,6 +116,10 @@
 		border: 2px solid #BD4141;
 		color: #BD4141;
 		border-radius: 100px;
+		&--active{
+			color: #00FF66;
+			border-color: #00FF66;
+		}
 	}
 }
 
@@ -218,6 +222,10 @@
 	color: #fff;
 	background: @mainColor;
 	margin-top: 10px;
+
+	&--bought{
+		background: #00FF66;
+	}
 }
 
 
@@ -324,7 +332,9 @@
 	display: grid;
 	grid-template-columns: repeat(3, 320px);
 	grid-gap: 15px;
-
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
 }
 .profile__buys__item {
 	color: #fff;
@@ -335,39 +345,36 @@
 }
 .profile__buys__item__img {
 	width: 100%;
-	height: 145px;
-	background: grey;
+	height: 280px;
+	background: #fff;
+	border-radius: 10px;
+	overflow: hidden;
 	img{
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 	}
 }
-.profile__buys__item__title {
-	color: #FFF;
-	font-size: 16px;
-	font-weight: 400;
-	margin: 10px 0 5px 0;
-}
-.profile__buys__item__description {
-	word-wrap: break-word;
-	font-size: 14px;
-	font-weight: 300;
-}
-.profile__buys__item__cost {
-	margin-top: 55px;
+
+.profile__buys__item__title{
 	font-size: 18px;
-	text-align: center;
+	margin-top: 5px;
 }
-.profile__buys__item__btn {
-	display: inline-block;
-	width: 100%;
+
+.profile__buys__item__info {
+	margin-top: 2px;
+}
+.profile__buys__item__info__item {
+	display: flex;
+	color: #ccc;
+}
+.profile__buys__item__info__item__header {}
+.profile__buys__item__info__item__value {
+	margin-left: 3px;
+}
+.profile__buys__item__info__item__value--bold {
+	font-weight: 600;
 	color: #fff;
-	background: #BD4141;
-	border-radius: 100px;
-	padding: 10px 30px;
-	text-align: center;
-	margin-top: 15px;
 }
 
 
@@ -375,58 +382,288 @@
 .profile__settings {
 	margin-top: 20px;
 }
-.profile__settings__row {
+.profile__settings__button{
+	white-space: nowrap;
+	display: inline-block;
+	padding: 10px 50px;
+	background: @mainColor;
+	border-radius: 100px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+
+
+.recovery {
+	padding: 300px 0 300px 0;
+}
+.recovery__body {
+	color: #fff;
+	padding: 25px 25px 100px 25px;
+	background: #151515;
+	border-radius: 10px;
+}
+.recovery__header {
+	font-size: 20px;
+	font-weight: 500;
+}
+.recovery__notice {
+	font-size: 16px;
+	font-weight: 400;
+	margin-top: 10px;
+	span{
+		color: @mainColor;
+	}
+}
+.recovery__form {
+	margin-top: 20px;
+}
+.recovery__input {
+	width: 100%;
+	input{
+		width: 205px;
+		background: none;
+		border: 1px solid @mainColor;
+		color: #fff;
+		font-size: 14px;
+		padding: 12px 16px;
+		font-family: 'Montserrat', sans-serif;
+		border-radius: 100px;
+	}
+
+	input[type=submit]{
+		background: @mainColor;
+		cursor: pointer;
+	}
+	&--submit{
+		margin-top: 10px;
+	}
+}
+.recovery__error {
+	margin-top: 15px;
+	color: #BD4141;
+}
+
+
+
+.profile__events {}
+.profile__events__item {
+	margin-bottom: 20px;
+	background: #0E0E0E;
+	border-radius: 10px;
+	padding: 10px 20px 20px 20px;
+	color: #fff;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+.profile__events__item__title {
 	display: flex;
-	justify-content: space-between;
-	margin-top: 40px;
+	h3{
+		font-size: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	span{
+		font-size: 18px;
+		font-weight: 400;
+		margin-left: 10px;
+	}
+}
+.profile__events__item__container {
+	margin-top: 25px;
+	display: flex;
+	align-items: center;
+}
+.profile__events__item__img {
+	flex: 0 0 200px;
+	border-radius: 10px;
+	overflow: hidden;
+	img{
+		width: 100%;
+		display: block;
+	}
+}
+
+.profile__events__item__info {
+	margin-left: 30px;
+}
+.profile__events__item__info__listitem {
+	margin-top: 5px;
+	font-size: 18px;
 	&:first-child{
 		margin-top: 0;
 	}
 }
-.profile__settings__password {}
-.profile__settings__title {
-	color: #FFF;
-	font-size: 16px;
-	font-weight: 400;
-	margin-bottom: 5px;
-}
-.profile__settings__form {
 
+
+
+.profile__account {
+	display: flex;
+	align-items: start;
+}
+.profile__account__userinfo {
+	flex: 1 1 auto;
+}
+.profile__account__userinfo__balance {
+	margin: 20px 0 15px 0;
+	color: #fff;
+	width: 220px;
+	padding: 15px 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #1B1B1B;
+	border-radius: 10px;
+	h3{
+		font-size: 16px;
+		font-weight: 500;
+	}
+	span{
+		color: @mainColor;
+	}
+}
+.profile__account__userinfo__listitem {
+	display: flex;
+	color: #fff;
+	h3{
+		font-size: 16px;
+		font-weight: 500;
+	}
+	span{
+		margin-left: 5px;
+	}
+	margin-bottom: 5px;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+.profile__account__userinfo__buttons {
 	display: flex;
 	flex-direction: column;
-}
-.profile__settings__input {
-	color: #fff;
-	margin-top: 10px;
-	font-size: 14px;
-	font-weight: 300;
-	padding: 10px 15px;
-	background: none;
-	border-radius: 100px;
-	border: 2px solid @mainColor;
-	&[type=submit]{
-		background: @mainColor;
-		font-size: 16px;
-		font-weight: 400;
-	}
-	&[type=file]{
-		border: 0;
+	margin-top: 20px;
+	a{
+		display: block;
+		width: 200px;
+		text-align: center;
+		color: #fff;
+		padding: 10px 0;
+		background: #1B1B1B;
+		border-radius: 10px;
+		&:last-child{
+			margin-top: 10px;
+			color: @mainColor;
+		}
 	}
 }
-.profile__settings__name {}
-.profile__settings__avatar {
+.profile__account__avatar {
+	flex: 0 0 200px;
+	position: relative;
+	border-radius: 10px;
+	overflow: hidden;
+	&:hover{
+		.profile__account__avatar__menu{
+			bottom: 0;
+		}
+	}
+	&:focus{
+		.profile__account__avatar__menu{
+			bottom: 0;
+		}
+	}
+}
+.profile__account__avatar__img {
+	width: 100%;
+	height: 200px;
 
-}
-.profile__settings__block {
-	display: flex;
-}
-.profile__settings__img {
-	width: 120px;
-	height: 120px;
-	background: grey;
-	margin-right: 15px;
 	img{
 		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.profile__account__avatar__menu {
+	position: absolute;
+	bottom: -100%;
+	left: 0;
+
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: rgba(0,0,0,.5);
+	padding: 10px 0;
+	transition: bottom .3s ease-in-out;
+
+}
+.profile__account__avatar__menu__item {
+	color: #fff;
+	margin-top: 5px;
+	&:first-child{
+		margin-top: 0;
+	}
+}
+
+
+
+.profile__change {
+	margin-top: 15px;
+}
+.profile__change__form {}
+.profile__change__dflex {
+	display: flex;
+}
+.profile__change__column {
+	flex: 0 0 200px;
+	margin-right: 40px;
+}
+.profile__change__inputBlock {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+
+	span{
+		color: #fff;
+		font-size: 16px;
+		font-weight: 500;
+	}
+
+	input{
+		margin-top: 5px;
+		font-size: 14px;
+		color: #fff;
+		padding: 15px;
+		background: none;
+		border: 1px solid @mainColor;
+		border-radius: 100px;
+	}
+}
+.profile__change__buttons {
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+	input[type=submit] {
+		padding: 13px;
+		background: @mainColor;
+		border: none;
+		color: #fff;
+		font-size: 16px;
+		font-weight: 500;
+		border-radius: 100px;
+	}
+	a{
+		margin-top: 15px;
+		display: block;
+		width: 100%;
+		text-align: center;
+		padding: 13px;
+		background: #BD4141;
+		color: #fff;
+		font-size: 16px;
+		font-weight: 500;
+		border-radius: 100px;
 	}
 }
 
@@ -533,5 +770,87 @@
 		font-weight: 700;
 		text-transform: uppercase;
 		cursor: pointer;
+	}
+}
+
+
+
+.popup__main{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.80);
+	&.active{
+		display: block;
+	}
+}
+.popup__delete {}
+.popup__deleteBlock {
+	width: 480px;
+	background: #151515;
+	border-radius: 10px;
+	padding: 25px;
+	margin: 80px auto 0 auto;
+}
+.popup__deleteBlock__question {
+	font-size: 16px;
+	color: #fff;
+}
+.popup__deleteBlock__buttons {
+	display: flex;
+	margin-top: 40px;
+	align-items: center;
+	a{
+		display: block;
+		font-size: 14px;
+		color: #fff;
+		border-radius: 100px;
+		padding: 12px 35px;
+	}
+}
+.popup__deleteBlock__buttons--delete {
+	background: @mainColor;
+	margin-right: 20px;
+}
+.popup__deleteBlock__buttons--cancel {
+	background: #A3A3A3;
+}
+
+.popup__accessCode{
+	.popup__block{
+		padding: 20px;
+		max-width: 400px;
+	}
+	.popup__title{
+		font-family: 'Raleway', sans-serif;
+		font-size: 20px;
+		font-weight: 700;
+		text-transform: none;
+	}
+	.popup__text{
+		font-size: 16px;
+		font-family: 'Raleway', sans-serif;
+		color: #fff;
+		margin-top: 20px;
+		span{
+			color: @mainColor;
+		}
+	}
+	.popup__form__input{
+		input{
+			padding: 15px 20px;
+			font-size: 16px;
+		}
+	}
+	.popup__ques{
+		color: #fff;
+		font-family: 'Raleway', sans-serif;
+		font-size: 14px;
+		&--reg{
+			color: @mainColor;
+		}
 	}
 }
