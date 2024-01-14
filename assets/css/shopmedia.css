@@ -154,7 +154,10 @@
     font-size: 13px;
   }
   .shopMain__item__cost__discount {
-    font-size: 14px;
+    font-size: 16px;
+  }
+  .shopMain__item--mainDiscount .shopMain__item__cost__discount {
+    margin-left: 4px;
   }
   .shopMain__item__img {
     height: 200px;
@@ -164,6 +167,17 @@
   }
   .popup__buyproduct .popup__block {
     padding: 20px 75px;
+  }
+}
+@media (max-width: 430px) {
+  .shopMain__item--noDiscount .shopMain__item__cost {
+    font-size: 14px;
+  }
+  .shopMain__item--mainDiscount .shopMain__item__cost__old p:last-child {
+    font-size: 14px;
+  }
+  .shopMain__item--subDiscount .shopMain__item__cost__old p {
+    font-size: 14px;
   }
 }
 @media (max-width: 400px) {
@@ -242,10 +256,12 @@
   }
   .shopMain__item__cost__discount {
     font-size: 14px;
-    transform: translateX(-5px);
   }
   .shopMain__item__img {
     height: 180px;
+  }
+  .shopMain__item--subDiscount .shopMain__item__cost__old p {
+    font-size: 13px;
   }
 }
 @media (max-width: 360px) {

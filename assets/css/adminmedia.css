@@ -160,7 +160,7 @@
     margin-bottom: 30px;
   }
   .main__gridBlock {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 50%);
   }
   .orders__gridBlock {
     grid-template-columns: repeat(2, 1fr);
@@ -242,11 +242,14 @@
   .main__userInfo__textBlock__value {
     font-size: 14px;
   }
-  .main__gridBlock {
-    grid-template-columns: repeat(1, 1fr);
-  }
   .orders__gridBlock__item__label {
     font-size: 14px;
+  }
+  .main__gridBlock {
+    grid-gap: 5px;
+  }
+  .main__gridBlock__item__name {
+    font-size: 15px;
   }
   .main__orderInfo__img {
     width: 100%;

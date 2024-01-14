@@ -14,6 +14,29 @@
   background: #151515;
   border-radius: 10px;
 }
+.shopMain__item--noDiscount .shopMain__item__cost {
+  color: #FFB500;
+  font-size: 16px;
+  font-weight: 400;
+}
+.shopMain__item--mainDiscount .shopMain__item__cost__old {
+  display: flex;
+}
+.shopMain__item--mainDiscount .shopMain__item__cost__old p:last-child {
+  font-size: 16px;
+  color: #FFB500;
+  margin-left: 5px;
+}
+.shopMain__item--mainDiscount .shopMain__item__cost__discount {
+  margin-left: 10px;
+}
+.shopMain__item--subDiscount .shopMain__item__cost__old p:first-child {
+  text-decoration: none;
+  font-weight: 400;
+}
+.shopMain__item--subDiscount .shopMain__item__cost__old p {
+  font-size: 16px;
+}
 .shopMain__item__img {
   width: 100%;
   border-radius: 10px;
@@ -55,16 +78,17 @@
   border-radius: 5px;
 }
 .shopMain__item__cost__sub p {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
+  margin-bottom: -5px;
 }
 .shopMain__item__cost__sub span {
-  font-size: 12px;
+  font-size: 10px;
   white-space: nowrap;
 }
 .shopMain__item__cost__old {
   color: #676767;
-  font-size: 16px;
+  font-size: 14px;
   margin-left: 5px;
 }
 .shopMain__item__cost__old p:first-child {
@@ -72,7 +96,7 @@
   font-weight: 300;
 }
 .shopMain__item__cost__discount {
-  font-size: 20px;
+  font-size: 24px;
   font-family: 'Raleway', sans-serif;
 }
 .shopItem {
