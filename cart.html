@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AppleVibe</title>
+  <link rel="stylesheet" href="assets/css/default.css">
+  <link rel="stylesheet" href="assets/css/shop.css">
+  <link rel="stylesheet" href="assets/css/media.css">
+  <link rel="stylesheet" href="assets/css/shopmedia.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/cookielib/src/cookie.min.js"></script>
+  <script src="assets/js/menu.js" defer></script>
+  <script src="assets/js/product.js" defer></script>
+  <script src="assets/js/preloader.js"></script>
+</head>
+
+<body>
+  <div class="preloader">
+    <div class="preloader__img"></div>
+    <div class="preloader__text">Подождите..</div>
+  </div>
+
+  <div class="wrapper">
+    <section class="shopMain" id="object2">
+      <div class="container">
+        <div class="header__nav">
+          <div class="header__nav__box">
+            <div class="header__flex">
+              <div class="header__nav__burger header__flex__item">
+                <button data-path="one" class="dropdown-toggle">
+                  <img src="assets/img/shop/burger.svg" alt="">
+                </button>
+                <ul data-target="one" class="header__nav__burger__dropdown dropdown-menu"
+                  aria-labelledby="dropdownMenuButton">
+                  <li><a class="dropdown-item" href="#">Главная</a></li>
+                  <li><a class="dropdown-item" href="#">Магазин</a></li>
+                  <li><a class="dropdown-item" href="#">О нас</a></li>
+                </ul>
+              </div>
+              <div class="header__nav__category header__flex__item">
+                <button data-path="two" class="dropdown-toggle">
+                  <img src="assets/img/shop/category.svg" alt="">
+                  <p>Категории</p>
+                </button>
+                <ul data-target="two" class="header__nav__category__dropdown dropdown-menu"
+                  aria-labelledby="dropdownMenuButton">
+                  <!-- <li><a class="dropdown-item" href="#"><img src="assets/img/shop/img.png" alt="">Мягкие игрушки</a></li> -->
+                  <!-- <li><a class="dropdown-item" href="#"><img src="assets/img/shop/img-1.png" alt="">Настольные игры</a></li> -->
+                  <li><a class="dropdown-item" href="#"><img src="assets/img/shop/img-2.png" alt="">Конструкторы</a>
+                  </li>
+                  <!-- <li><a class="dropdown-item" href="#"><img src="assets/img/shop/img-3.png" alt="">Спорттовары</a></li> -->
+                  <!-- <li><a class="dropdown-item" href="#"><img src="assets/img/shop/img-4.png" alt="">Посуда</a></li> -->
+                  <!-- <li><a class="dropdown-item" href="#"><img src="assets/img/shop/img-5.png" alt="">Книги</a></li> -->
+                  <li><a class="dropdown-item" href="#"><img src="assets/img/shop/img-7.png" alt="">Одежда</a></li>
+                  <li><a class="dropdown-item" href="#"><img src="assets/img/shop/img-6.png" alt="">Канцелярия</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header__flex">
+              <a class="header__nav__cart header__flex__item">
+                <img src="assets/img/shop/cart.svg" alt="">
+              </a>
+              <a class="header__nav__user header__flex__item">
+                <p>andrey1219</p>
+                <img src="assets/img/avatars/av1.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+        <form action="" class="cartMain">
+          <h3>КОРЗИНА</h3>
+          <div class="cartMain__list__buttons">
+            <button class="cartMain__list__buttons-all" type="button" id="select-all-btn">Выбрать все</button>
+            <button class="cartMain__list__buttons-del">Удалить</button>
+            <button class="cartMain__list__buttons-gift">В подарок</button>
+          </div>
+          <div class="cartMain__flex">
+            <div class="cartMain__list">
+              <div class="cartMain__item">
+                <div class="cartMain__item__blockFlex">
+                  <a href="#" class="cartMain__item-img">
+                    <img src="assets/img/avatars/av1.png" alt="">
+                  </a>
+                  <div class="cartMain__item__info">
+                    <a href="#" class="cartMain__item__info-name">Майнкрафт серая крепость с катапультой</a>
+                    <p class="cartMain__item__info-description">Конструктор аналог LEGO Майнкрафт MY WORLD</p>
+                    <!-- *****************ЦЕНЫ************* -->
+                    <!--<div class="cartMain__item__price">
+
+                    </div>
+                    <div class="cartMain__item__price">
+                      <s class="cartMain__item__price-discount">9999.99руб</s>
+                      <p class="cartMain__item__price-default">8999.99руб</p>
+                    </div>
+                    <div class="cartMain__item__price">
+                      <p class="cartMain__item__price-sub">8999.99руб</p> <span class="cartMain__item__price-subSpan">с
+                        подпиской</span>
+                      <p class="cartMain__item__price-default">9999.99руб</p>
+                    </div> -->
+                    <div class="cartMain__item__price-flex">
+                      <div class="cartMain__item__price-box">
+                        <p class="cartMain__item__price-sub">8999.99руб</p> <span
+                          class="cartMain__item__price-subSpan">с
+                          подпиской</span>
+                      </div>
+                      <div class="cartMain__item__price-box">
+                        <s class="cartMain__item__price-discount">9999.99руб</s>
+                        <p class="cartMain__item__price-default">8999.99руб</p>
+                      </div>
+                    </div>
+                    <div class="cartMain__item__actions">
+                      <div class="cartMain__item__flex">
+                        <div class="cartMain__item-like">
+                          <div></div>
+                        </div>
+                        <div class="cartMain__item-del"><img src="assets/img/shop/delete-red.svg" alt=""></div>
+                        <div class="count">
+                          <span class="change minus min">
+                            <img src="assets/img/shop/minus.svg" alt="">
+                          </span>
+                          <input type="text" name="productСount" value="1" disabled="">
+                          <span class="change plus">
+                            <img src="assets/img/shop/plus.svg" alt="">
+                          </span>
+                        </div>
+                      </div>
+                      <label class="checkbox__label">
+                        <input class="checkbox" type='checkbox' name='checkbox' value='1' />
+                        <span></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="cartMain__item__blockFlex2">
+                  <div class="cartMain__item__price-flex">
+                    <div class="cartMain__item__price-box">
+                      <p class="cartMain__item__price-sub">8999.99руб</p> <span class="cartMain__item__price-subSpan">с
+                        подпиской</span>
+                    </div>
+                    <div class="cartMain__item__price-box">
+                      <s class="cartMain__item__price-discount">9999.99руб</s>
+                      <p class="cartMain__item__price-default">8999.99руб</p>
+                    </div>
+                  </div>
+                  <div class="cartMain__item__actions">
+                    <div class="cartMain__item__flex">
+                      <div class="cartMain__item-like">
+                        <div></div>
+                      </div>
+                      <div class="cartMain__item-del"><img src="assets/img/shop/delete-red.svg" alt=""></div>
+                      <div class="count">
+                        <span class="change minus min">
+                          <img src="assets/img/shop/minus.svg" alt="">
+                        </span>
+                        <input type="text" name="productСount" value="1" disabled="">
+                        <span class="change plus">
+                          <img src="assets/img/shop/plus.svg" alt="">
+                        </span>
+                      </div>
+                    </div>
+                    <label class="checkbox__label">
+                      <input class="checkbox" type='checkbox' name='checkbox' value='1' />
+                      <span></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cartMain__item giftItem">
+                <div class="cartMain__item__blockFlex">
+                  <div class="cartMain__item-img giftItem-img">
+                    <img src="assets/img/avatars/av1.png" alt="">
+                    <span>+1</span>
+                  </div>
+                  <div class="cartMain__item__info giftItem-info">
+                    <div class="giftItem-flex">
+                      <h3 class="cartMain__item__info-name">Название подарка</h3>
+                      <span>Подарок</span>
+                    </div>
+                    <p class="cartMain__item__info-description giftItem-description">Товаров в подарке: 2</p>
+                    <div class="giftItem-price">
+                      <p>Цена: <span>699руб</span></p>
+                    </div>
+                    <div class="cartMain__item__actions">
+                      <div class="cartMain__item__flex">
+                        <a href="#" class="giftItem-change">Изменить</a>
+                        <div class="cartMain__item-del"><img src="assets/img/shop/delete-red.svg" alt=""></div>
+
+                      </div>
+                      <label class="checkbox__label">
+                        <input class="checkbox" type='checkbox' name='checkbox' value='1' />
+                        <span></span>
+                      </label>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="cartMain__item__blockFlex2">
+                  <div class="cartMain__item__actions">
+                    <div class="cartMain__item__flex">
+                      <a href="#" class="giftItem-change">Изменить</a>
+                      <div class="cartMain__item-del"><img src="assets/img/shop/delete-red.svg" alt=""></div>
+
+                    </div>
+                    <label class="checkbox__label">
+                      <input class="checkbox" type='checkbox' name='checkbox' value='1' />
+                      <span></span>
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="cartMain__gifts">
+                <h3>У вас есть собранные подарки:</h3>
+                <div class="cartMain__slider" id="slider1">
+                  <div class="cartMain__slider-item">
+                    <div class="cartMain__slider-img">
+                      <img src="assets/img/avatars/av1.png" alt="">
+                      <span>+1</span>
+                    </div>
+                    <div class="cartMain__slider__info">
+                      <div class="cartMain__slider__info-box">
+                        <p class="cartMain__slider-name">Название подарка</p>
+                        <p class="cartMain__slider-total">Товаров в подарке: 2</p>
+                      </div>
+                      <div class="cartMain__slider__info-box">
+                        <p class="cartMain__slider-cost">Цена: <span>699руб</span></p>
+                        <div class="cartMain__slider-buy">
+                          <p>В корзину</p> <img src="assets/img/shop/cartBuy.svg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cartMain__slider-item">
+                    <div class="cartMain__slider-img">
+                      <img src="assets/img/avatars/av1.png" alt="">
+                      <span>+1</span>
+                    </div>
+                    <div class="cartMain__slider__info">
+                      <div class="cartMain__slider__info-box">
+                        <p class="cartMain__slider-name">Название подарка</p>
+                        <p class="cartMain__slider-total">Товаров в подарке: 2</p>
+                      </div>
+                      <div class="cartMain__slider__info-box">
+                        <p class="cartMain__slider-cost">Цена: <span>699руб</span></p>
+                        <div class="cartMain__slider-buy">
+                          <p>В корзину</p> <img src="assets/img/shop/cartBuy.svg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cartMain__slider-item">
+                    <div class="cartMain__slider-img">
+                      <img src="assets/img/avatars/av1.png" alt="">
+                      <span>+1</span>
+                    </div>
+                    <div class="cartMain__slider__info">
+                      <div class="cartMain__slider__info-box">
+                        <p class="cartMain__slider-name">Название подарка</p>
+                        <p class="cartMain__slider-total">Товаров в подарке: 2</p>
+                      </div>
+                      <div class="cartMain__slider__info-box">
+                        <p class="cartMain__slider-cost">Цена: <span>699руб</span></p>
+                        <div class="cartMain__slider-buy">
+                          <p>В корзину</p> <img src="assets/img/shop/cartBuy.svg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+            <div class="cartMain__total-box">
+              <div class="cartMain__total">
+                <h3>Ваш заказ</h3>
+                <div class="carMain__total__flex">
+                  <div class="carMain__total__bg">
+                    <p><span>Всего за товары: </span>111540 руб</p>
+                    <p><span>Скидка на товары: </span>-111180 руб</p>
+                  </div>
+                  <div class="carMain__total__bg">
+                    <p> <span>Всего за подарки: </span>111540 руб</p>
+                    <p> <span>Скидка на подарки: </span>-111180 руб</p>
+                  </div>
+                  <div class="carMain__total__bg">
+                    <p> <span>Доставка: </span>111450 руб</p>
+                    <p> <span>Скидка на доставку: </span>-111180 руб</p>
+                  </div>
+                </div>
+                <div class="carMain__total__sum">
+                  <p class="carMain__total__sum-text">Сумма заказа:</p>
+                  <p class="carMain__total__sum-numb">112994 руб</p>
+                </div>
+                <a href="#">Оформить заказ</a>
+                <p class="carMain__total-text">Оформляя заказ, я соглашаюсь с <span>пользовательским
+                    соглашением, политикой
+                    конфиденциальности</span> и даю
+                  согласие
+                  на обработку данных</p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+  </div>
+  </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__body">
+        <a href="/" class="footer__logo"><img src="assets/img/textLogo.png" alt="logo"></a>
+        <div class="footer__socials">
+          <a href="#"><img src="assets/img/icons/tg.svg" alt="tg"></a>
+          <a href="#"><img src="assets/img/icons/yt.svg" alt="yt"></a>
+          <a href="#"><img src="assets/img/icons/vk.svg" alt="vk"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </div>
+
+  <style>
+    .wrapper {
+      overflow: visible;
+    }
+
+    .count {
+      margin-left: 20px;
+
+      input {
+        width: 40px;
+        height: 25px;
+      }
+    }
+
+    .change {
+      padding: 5px;
+      width: 25px !important;
+      height: 25px !important;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    
+  </style>
+
+
+
+  <script>
+
+    const itemIMG = document.querySelectorAll(".shopMain__item__img");
+    itemIMG.forEach((img) => {
+      img.style.height = img.offsetWidth + "px";
+    });
+
+    const productStatuses = document.querySelectorAll(".shopMain__item__img__status");
+
+    productStatuses.forEach((obj) => {
+      let value = obj.innerText;
+      switch (value) {
+        case "В наличии":
+          {
+            obj.style.background = "#52B256";
+            break;
+          }
+
+        case "Нет в наличии":
+          {
+            obj.style.background = "#484848";
+            break;
+          }
+
+        case "Скоро закончится":
+          {
+            obj.style.background = "#DC4D4D";
+            break;
+          }
+
+        case "Скоро в продаже":
+          {
+            obj.style.background = "#FFB500";
+            break;
+          }
+
+        default:
+          {
+            obj.style.background = "#000";
+          }
+      }
+    });
+
+
+    let myBlock2 = document.querySelector('.header__nav');
+    let total = document.querySelector('.cartMain__total-box');
+    let shop = document.querySelector('.shopMain');
+    let container = document.querySelector('.cartMain');
+    let blockHeight2 = myBlock2.offsetHeight;
+
+    myBlock2.style.position = "fixed";
+    myBlock2.style.width = container.offsetWidth + 'px';
+    shop.style.paddingTop = blockHeight2 + "px";
+
+
+
+    if (window.innerWidth <= 620) {
+      const navElements = document.querySelectorAll(".header__flex__item");
+      navElements.forEach((elem) => {
+        elem.style.width = elem.offsetHeight + "px";
+      });
+    }
+
+    if (window.innerWidth <= 960) {
+      const navElements = document.querySelectorAll(".header__flex__item");
+      navElements.forEach((elem) => {
+        elem.style.width = elem.offsetHeight + "px";
+      });
+    }
+
+    const slider1 = document.getElementById('slider1');
+    if (slider1 != null) initializeSlider(slider1);
+    function initializeSlider(slider) {
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        slider.classList.add('active');
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+      });
+
+      slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.classList.remove('active');
+      });
+
+      slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.classList.remove('active');
+      });
+
+      slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const SCROLL_SPEED = 1;
+        const walk = (x - startX) * SCROLL_SPEED;
+        slider.scrollLeft = scrollLeft - walk;
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const selectAllBtn = document.getElementById('select-all-btn');
+      const checkboxes = document.querySelectorAll('.checkbox');
+      let selectAll = true;
+
+      selectAllBtn.addEventListener('click', function () {
+        checkboxes.forEach(function (checkbox) {
+          checkbox.checked = selectAll;
+        });
+
+        if (selectAll) {
+          selectAllBtn.textContent = 'Отменить все';
+        } else {
+          selectAllBtn.textContent = 'Выбрать все';
+        }
+
+        selectAll = !selectAll;
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>

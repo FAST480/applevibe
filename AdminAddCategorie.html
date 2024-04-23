@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Панель управления</title>
+	<link rel="stylesheet" href="assets/css/admin.css">
+	<link rel="stylesheet" href="assets/css/adminmedia.css">
+	<script src="assets/js/menu.js" defer></script>
+</head>
+<body>
+	
+	<div class="wrapper">
+		
+		<div class="aside" data-burgermenu="adminindex">
+			<a class="aside__logo">AppleVibe</a>
+			<ul class="aside__menu">
+				<li><a href="#">Пользователи</a></li>
+				<li><a href="#">Видеоролики</a></li>
+				<li><a href="#">Новости</a></li>
+				<li><a href="AdminOrders.html">Заказы</a></li>
+				<li><a href="#">События</a></li>
+			</ul>
+		</div>
+
+		<header class="header">
+			<div class="header__burger" data-burger="adminindex">
+				<span></span>
+			</div>
+		</header>
+
+		<main class="main">
+			<div class="main__title">Новая категория</div>
+			<div class="main__blockMain">
+				<form action="" method="post" enctype="multipart/form-data" class="product__form">
+					<div class="product__form__inputBlock">
+						<div class="product__form__inputBlock__title">Название категории</div>
+						<input type="text" class="product__form__inputBlock__input" name="categorieName" placeholder="Название" required>
+					</div>
+					<div class="product__form__inputBlock product__form__inputBlock--files">
+						<div class="product__form__inputBlock__images">
+							<img src="assets/img/products/1-2.jpeg" alt="1">
+						</div>
+						<input type="file" name="image" required>
+					</div>
+					<div class="product__form__inputBlock product__form__inputBlock--buttons">
+						<input type="submit" name="submit" value="Сохранить">
+						<a href="#">Отмена</a>
+					</div>
+				</form>
+			</div>
+		</main>
+
+	</div>
+
+</body>
+</html>

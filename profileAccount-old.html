@@ -46,29 +46,32 @@
 						<div class="profile__main">
 							<div class="profile__title">Аккаунт</div>
 							<div class="profile__account">
+								<div class="profile__account__left">
+									<div class="profile__account__left__box">
+										<div class="profile__account__avatar">
+											<div class="profile__account__avatar__img"><img src="assets/img/avatars/av1.png" alt="img"></div>
+											<div class="profile__account__avatar__menu">
+												<a class="profile__account__avatar__menu__item" data-popup="popup__avatar">Открыть</a>
+												<a class="profile__account__avatar__menu__item" data-popup="popup__changeAvatar">Обновить</a>
+												<a class="profile__account__avatar__menu__item" >Удалить</a>
+											</div>
+										</div>
 
+										<a href="/profile/sub" class="profile__account__subscription">
+											<img src="assets/img/subscription/IMG_20240113_101725_421.jpg" alt="">
+											<span>Действует до 13.02.2024</span>
+										</a>
+									</div>
 
-								<div class="profile__account__avatar">
-									<div class="profile__account__avatar__img"><img src="assets/img/avatars/av1.png" alt="img"></div>
-									<div class="profile__account__avatar__menu">
-										<a class="profile__account__avatar__menu__item" data-popup="popup__avatar">Открыть</a>
-										<a class="profile__account__avatar__menu__item"  data-popup="popup__changeAvatar">Обновить</a>
-										<a class="profile__account__avatar__menu__item">Удалить</a>
+									<div class="profile__account__userinfo__balance">
+										<div class="profile__account__userinfo__balance__box">
+											<a href="#" class="profile__account__userinfo__balance__button">Пополнить</a>
+										</div>
+										<h3>Баланс:</h3>
+										<span>0 руб</span>
 									</div>
 								</div>
 
-								<a href="/profile/sub" class="profile__account__subscription">
-									<img src="assets/img/subscription/IMG_20240113_101725_421.jpg" alt="">
-									<span>Действует до 13.02.2024</span>
-								</a>
-
-								<div class="profile__account__userinfo__balance">
-									<div class="profile__account__userinfo__balance__box">
-										<a href="#" class="profile__account__userinfo__balance__button">Пополнить</a>
-									</div>
-									<h3>Баланс:</h3>
-									<span>0 руб</span>
-								</div>
 
 								<form class="profile__account__userinfo__box password__hidden" id="passwordBox">
 									<div class="profile__account__userinfo__listitem">
@@ -83,16 +86,13 @@
 										<input class="profile__account__userinfo__input" id="confirmnewpass" value="123456789">
 										<label class="profile__account__userinfo__label" for="confirmnewpass">Подтверждение пароля</label>
 									</div>
-
-									<div class="profile__account__userinfo__listitem__box" id="buttonBox2">
-										<div class="profile__account__userinfo__listitem-save">
-											<input type="submit" class="profile__account__userinfo__input-save" value="Сохранить"
-												id="savePasswordButton">
-										</div>
-										<div class="profile__account__userinfo__listitem-cancel">
-											<input type="button" class="profile__account__userinfo__input-cancel" value="Отменить"
-												id="cancelPasswordButton">
-										</div>
+									<div class="profile__account__userinfo__listitem-save">
+										<input type="submit" class="profile__account__userinfo__input-save" value="Сохранить"
+											id="savePasswordButton">
+									</div>
+									<div class="profile__account__userinfo__listitem-cancel">
+										<input type="button" class="profile__account__userinfo__input-cancel" value="Отменить"
+											id="cancelPasswordButton">
 									</div>
 								</form>
 
@@ -120,21 +120,20 @@
 										<input class="profile__account__userinfo__input" id="password" value="**********">
 										<label class="profile__account__userinfo__label" for="password">Пароль</label>
 									</div>
+
+
 									<div class="profile__account__userinfo__listitem">
 										<input class="profile__account__userinfo__input" id="number" value="+7(989) 509 68-16"
 											data-phone-pattern>
 										<label class="profile__account__userinfo__label" for="number">Номер телефона:</label>
 									</div>
-
-									<div class="profile__account__userinfo__listitem__box" id="buttonBox">
-										<div class="profile__account__userinfo__listitem-save" id="savehide">
-											<input type="submit" class="profile__account__userinfo__input-save" value="Сохранить"
-												id="saveButton">
-										</div>
-										<div class="profile__account__userinfo__listitem-cancel" id="cancelhide">
-											<input type="button" class="profile__account__userinfo__input-cancel" value="Отменить"
-												id="cancelButton">
-										</div>
+									<div class="profile__account__userinfo__listitem-save" id="savehide">
+										<input type="submit" class="profile__account__userinfo__input-save" value="Сохранить"
+											id="saveButton">
+									</div>
+									<div class="profile__account__userinfo__listitem-cancel" id="cancelhide">
+										<input type="button" class="profile__account__userinfo__input-cancel" value="Отменить"
+											id="cancelButton">
 									</div>
 								</form>
 
@@ -307,7 +306,7 @@
 		</div>
 	</div>
 
-	<div class="popup popup__changeAvatar">
+	<div class="popup popup__changeAvatar active">
 		<div class="popup__bg"></div>
 		<div class="popup__block">
 			<div class="popup__close" data-popup="popuplogin">
@@ -317,19 +316,19 @@
 			<div class="popup__title">Смена аватара</div>
 			<div class="popup__offer">
 				<form action="" class="popup__changeAvatarform">
-					<h3>Вы можете загрузить изображение в формате JPG или PNG.</h3>
 					<div id="upload-demo">
 					</div>
 					<label class="popup__changeAvatarform__label">
 						<input class="popup__changeAvatarform__label__button" type="file" name="avatar" id="upload"
 							accept="image/*">
-						<input type="hidden" name="base64_img" id="base64_img">
-						<span class="popup__changeAvatarform__label__span" id="textFile">Выберите файл</span>
+							<input type="hidden" name="base64_img" id="base64_img">
+						<span class="popup__changeAvatarform__label__span">Выберите файл</span>
 						<span class="popup__changeAvatarform__label__text" id="fileName"></span>
 					</label>
-					<input class="popup__changeAvatarform__input upload-result" id="uploadButton" type="submit" name="submit" value="Изменить">
+					<input class="popup__changeAvatarform__input upload-result" type="submit" name="submit" value="Изменить">
 					<img id="img-result" />
 				</form>
+				<button class="upload-result">Result</button>
 			</div>
 		</div>
 	</div>

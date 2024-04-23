@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Панель управления</title>
+	<link rel="stylesheet" href="assets/css/admin.css">
+	<link rel="stylesheet" href="assets/css/adminmedia.css">
+	<script src="assets/js/menu.js" defer></script>
+</head>
+<body>
+	
+	<div class="wrapper">
+		
+		<div class="aside" data-burgermenu="adminindex">
+			<a class="aside__logo">AppleVibe</a>
+			<ul class="aside__menu">
+				<li><a href="#">Пользователи</a></li>
+				<li><a href="#">Видеоролики</a></li>
+				<li><a href="#">Новости</a></li>
+				<li><a href="AdminOrders.html">Заказы</a></li>
+				<li><a href="#">События</a></li>
+			</ul>
+		</div>
+
+		<header class="header">
+			<div class="header__burger" data-burger="adminindex">
+				<span></span>
+			</div>
+		</header>
+
+		<main class="main">
+			<div class="main__title">Панель управления</div>
+			<div class="main__blockMain">
+				<div class="main__upperline">
+					<form class="main__searchBox">
+						<div class="main__searchBox--input"><input type="text" placeholder="Поиск"></div>
+						<button class="main__searchBox--btn" type="submit">Найти</button>
+					</form>
+					<div class="main__rightBox">
+						<a href="#" class="main__create">Создать</a>
+					</div>
+				</div>
+				<div class="main__listHeader">
+					<div class="main__listHeader__columnName">Категория</div>
+					<div class="main__listHeader__columnName">Товаров в категории</div>
+				</div>
+				<div class="main__listBlock">
+					<a href="#" class="main__listItem main__listItem--user">
+						<div class="main__listItem__subitem">Категория</div>
+						<div class="main__listItem__subitem">
+							0
+						</div>
+					</a>
+				</div>
+				<div class="main__paginator">
+					<a href="#" class="main__paginator__item">1</a>
+					<a href="#" class="main__paginator__item">2</a>
+					<a href="#" class="main__paginator__item">3</a>
+					<a href="#" class="main__paginator__item">4</a>
+					<a href="#" class="main__paginator__item">5</a>
+				</div>
+			</div>
+		</main>
+
+	</div>
+
+</body>
+</html>

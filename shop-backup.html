@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AppleVibe</title>
+	<link rel="stylesheet" href="assets/css/default.css">
+	<link rel="stylesheet" href="assets/css/shop.css">
+	<link rel="stylesheet" href="assets/css/media.css">
+	<link rel="stylesheet" href="assets/css/shopmedia.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="assets/js/menu.js" defer></script>
+	<script src="assets/js/preloader.js"></script>
+</head>
+
+<body>
+	<div class="preloader">
+		<div class="preloader__img"></div>
+		<div class="preloader__text">Подождите..</div>
+	</div>
+
+
+
+	<div class="wrapper">
+
+		<header class="header__shop ">
+			<div class="container">
+				<div class="header__box">
+					<div class="header__box-img ">
+						<img src="assets/img/IMG_20240116_151020_095 1.png" alt="">
+					</div>
+					<div class="header__box-img">
+						<img src="assets/img/IMG_20240118_162650_860 1.png" alt="">
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+		<section class="shopMain">
+			<div class="container">
+				<div class="shopMain__body">
+					<div class="header__nav">
+						<div class="header__nav__box">
+							<div class="header__nav__burger">
+								<button data-path="one" class="dropdown-toggle">
+									<img src="assets/img/shop/burger.svg" alt="">
+								</button>
+								<ul data-target="one" class="header__nav__burger__dropdown dropdown-menu"
+									aria-labelledby="dropdownMenuButton">
+									<li><a class="dropdown-item" href="#">Главная</a></li>
+									<li><a class="dropdown-item" href="#">Магазин</a></li>
+									<li><a class="dropdown-item" href="#">О нас</a></li>
+								</ul>
+							</div>
+							<div class="header__flex">
+								<div class="header__nav__category">
+									<button data-path="two" class="dropdown-toggle">
+										<img src="assets/img/shop/category.svg" alt="">
+										<p>Категории</p>
+									</button>
+									<ul data-target="two" class="header__nav__category__dropdown dropdown-menu"
+										aria-labelledby="dropdownMenuButton">
+										<!-- <li><a class="dropdown-item" href="#"><img src="assets/img/shop/img.png" alt="">Мягкие игрушки</a></li> -->
+										<!-- <li><a class="dropdown-item" href="#"><img src="assets/img/shop/img-1.png" alt="">Настольные игры</a></li> -->
+										<li><a class="dropdown-item" href="#"><img src="assets/img/shop/img-2.png" alt="">Конструкторы</a>
+										</li>
+										<!-- <li><a class="dropdown-item" href="#"><img src="assets/img/shop/img-3.png" alt="">Спорттовары</a></li> -->
+										<!-- <li><a class="dropdown-item" href="#"><img src="assets/img/shop/img-4.png" alt="">Посуда</a></li> -->
+										<!-- <li><a class="dropdown-item" href="#"><img src="assets/img/shop/img-5.png" alt="">Книги</a></li> -->
+										<li><a class="dropdown-item" href="#"><img src="assets/img/shop/img-6.png" alt="">Канцелярия</a></li>
+										<!-- <li><a class="dropdown-item" href="#"><img src="assets/img/shop/img-7.png" alt="">Одежда</a></li> -->
+									</ul>
+	
+								</div>
+								<div class="header__nav__search">
+									<form method="get">
+										<input name="search" type="text" placeholder="Найти игрушку">
+										<button type="submit">
+											<img src="assets/img/shop/search.svg" alt="">
+										</button>
+									</form>
+								</div>
+								<div class="header__nav__cart">
+									<img src="assets/img/shop/cart.svg" alt="">
+								</div>
+
+							</div>
+							<div class="header__nav__user">
+								<p>andrey1219</p>
+								<img src="assets/img/avatars/av1.png" alt="">
+							</div>
+						</div>
+						<div class="header__nav__bg">
+							<div class="header__nav__sort">
+								<div class="header__nav__sorting">
+									<button data-path="three" class="dropdown-toggle">
+										<p>Популярные</p>
+										<img src="assets/img/shop/arrow.svg" alt="">
+									</button>
+									<ul data-target="three" class="header__nav__sorting__dropdown dropdown-menu"
+										aria-labelledby="dropdownMenuButton">
+										<li><a class="dropdown-item" href="#">Популярные</a></li>
+										<li><a class="dropdown-item" href="#">Новинки</a></li>
+										<li><a class="dropdown-item" href="#">Сначала дешёвые</a></li>
+										<li><a class="dropdown-item" href="#">Сначала дорогие</a></li>
+									</ul>
+	
+								</div>
+								<a href="#" class="header__nav__sort__favorite"><img src="assets/img/shop/heart.svg" alt=""></a>
+								<div class="header__nav__filter">
+									<button data-path="four" class="dropdown-toggle">
+										<p>Фильтры</p>
+										<img src="assets/img/shop/filter.svg" alt="">
+									</button>
+									<ul data-target="four" class="header__nav__filter__dropdown dropdown-menu"
+										aria-labelledby="dropdownMenuButton">
+										<li><a class="dropdown-item" href="#">Цена</a></li>
+										<li><input type="checkbox" class="dropdown-item" href="#">В наличии</input></li>
+										<li><input type="checkbox" class="dropdown-item" href="#">Нет в наличии</input></li>
+										<li><a class="dropdown-item" href="#">Применить</a></li>
+										<li><a class="dropdown-item" href="#">Сбросить</a></li>
+									</ul>
+	
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+
+					<div class="shopMain__grid">
+						<a href="#" class="shopMain__item">
+							<div class="shopMain__item__img">
+								<img src="assets/img/products/1.jpeg" alt="1">
+								<div class="shopMain__item__img__status">В наличии</div>
+							</div>
+							<div class="shopMain__item__title">Школьная тетрадь</div>
+							<div class="shopMain__item__info">Тетрадь для ведения предметов</div>
+							<div class="shopMain__item__cost">
+								<div class="shopMain__item__cost__sub">
+									<p>89.99руб</p>
+									<span>с подпиской</span>
+								</div>
+								<div class="shopMain__item__cost__old">
+									<p>199.99руб</p>
+									<p>129.99руб</p>
+								</div>
+								<div class="shopMain__item__cost__discount">-10%</div>
+							</div>
+						</a>
+						<a href="#" class="shopMain__item">
+							<div class="shopMain__item__img">
+								<img src="assets/img/products/1.jpeg" alt="1">
+								<div class="shopMain__item__img__status">Нет в наличии</div>
+							</div>
+							<div class="shopMain__item__cost">
+								<div class="shopMain__item__cost__sub">
+									<p>79.99руб</p>
+									<span>с подпиской</span>
+								</div>
+								<div class="shopMain__item__cost__old">
+									<p>99.99руб</p>
+									<p>89.99руб</p>
+								</div>
+								<div class="shopMain__item__cost__discount">-10%</div>
+							</div>
+							<div class="shopMain__item__title">Школьная тетрадь</div>
+							<div class="shopMain__item__info">Тетрадь для ведения предметов</div>
+
+						</a>
+						<a href="#" class="shopMain__item">
+							<div class="shopMain__item__img">
+								<img src="assets/img/products/1.jpeg" alt="1">
+								<div class="shopMain__item__img__status">Скоро в продаже</div>
+							</div>
+							<div class="shopMain__item__title">Школьная тетрадь</div>
+							<div class="shopMain__item__info">Тетрадь для ведения предметов</div>
+							<div class="shopMain__item__cost">
+								<div class="shopMain__item__cost__sub">
+									<p>79.99руб</p>
+									<span>с подпиской</span>
+								</div>
+								<div class="shopMain__item__cost__old">
+									<p>99.99руб</p>
+									<p>89.99руб</p>
+								</div>
+								<div class="shopMain__item__cost__discount">-10%</div>
+							</div>
+						</a>
+						<a href="#" class="shopMain__item">
+							<div class="shopMain__item__img">
+								<img src="assets/img/products/1.jpeg" alt="1">
+								<div class="shopMain__item__img__status">Скоро закончится</div>
+							</div>
+							<div class="shopMain__item__title">Школьная тетрадь</div>
+							<div class="shopMain__item__info">Тетрадь для ведения предметов</div>
+							<div class="shopMain__item__cost">
+								<div class="shopMain__item__cost__sub">
+									<p>79.99руб</p>
+									<span>с подпиской</span>
+								</div>
+								<div class="shopMain__item__cost__old">
+									<p>99.99руб</p>
+									<p>89.99руб</p>
+								</div>
+								<div class="shopMain__item__cost__discount">-10%</div>
+							</div>
+						</a>
+						<a href="#" class="shopMain__item">
+							<div class="shopMain__item__img"><img src="assets/img/products/1.jpeg" alt="1"></div>
+							<div class="shopMain__item__title">Школьная тетрадь</div>
+							<div class="shopMain__item__info">Тетрадь для ведения предметов</div>
+							<div class="shopMain__item__cost">
+								<div class="shopMain__item__cost__sub">
+									<p>79.99руб</p>
+									<span>с подпиской</span>
+								</div>
+								<div class="shopMain__item__cost__old">
+									<p>99.99руб</p>
+									<p>89.99руб</p>
+								</div>
+								<div class="shopMain__item__cost__discount">-10%</div>
+							</div>
+						</a>
+						<a href="#" class="shopMain__item">
+							<div class="shopMain__item__img"><img src="assets/img/products/1.jpeg" alt="1"></div>
+							<div class="shopMain__item__title">Школьная тетрадь</div>
+							<div class="shopMain__item__info">Тетрадь для ведения предметов</div>
+							<div class="shopMain__item__cost">
+								<div class="shopMain__item__cost__sub">
+									<p>79.99руб</p>
+									<span>с подпиской</span>
+								</div>
+								<div class="shopMain__item__cost__old">
+									<p>99.99руб</p>
+									<p>89.99руб</p>
+								</div>
+								<div class="shopMain__item__cost__discount">-10%</div>
+							</div>
+						</a>
+						<a href="#" class="shopMain__item">
+							<div class="shopMain__item__img"><img src="assets/img/products/1.jpeg" alt="1"></div>
+							<div class="shopMain__item__title">Школьная тетрадь</div>
+							<div class="shopMain__item__info">Тетрадь для ведения предметов</div>
+							<div class="shopMain__item__cost">
+								<div class="shopMain__item__cost__sub">
+									<p>79.99руб</p>
+									<span>с подпиской</span>
+								</div>
+								<div class="shopMain__item__cost__old">
+									<p>99.99руб</p>
+									<p>89.99руб</p>
+								</div>
+								<div class="shopMain__item__cost__discount">-10%</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__body">
+					<a href="/" class="footer__logo"><img src="assets/img/textLogo.png" alt="logo"></a>
+					<div class="footer__socials">
+						<a href="#"><img src="assets/img/icons/tg.svg" alt="tg"></a>
+						<a href="#"><img src="assets/img/icons/yt.svg" alt="yt"></a>
+						<a href="#"><img src="assets/img/icons/vk.svg" alt="vk"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+
+	<script>
+
+		const itemIMG = document.querySelectorAll(".shopMain__item__img");
+		itemIMG.forEach((img) => {
+			img.style.height = img.offsetWidth + "px";
+		});
+
+		const productStatuses = document.querySelectorAll(".shopMain__item__img__status");
+
+		productStatuses.forEach((obj) => {
+			let value = obj.innerText;
+			switch (value) {
+				case "В наличии":
+					{
+						obj.style.background = "#52B256";
+						break;
+					}
+
+				case "Нет в наличии":
+					{
+						obj.style.background = "#484848";
+						break;
+					}
+
+				case "Скоро закончится":
+					{
+						obj.style.background = "#DC4D4D";
+						break;
+					}
+
+				case "Скоро в продаже":
+					{
+						obj.style.background = "#FFB500";
+						break;
+					}
+
+				default:
+					{
+						obj.style.background = "#000";
+					}
+			}
+		});
+
+
+		let myBlock = document.querySelector('.header__box');
+		let myBlock2 = document.querySelector('.header__nav');
+		let container = document.querySelector('.shopMain__body');
+		let shop = document.querySelector('.shopMain');
+		let blockHeight = myBlock.offsetHeight + 20;
+		let blockHeight2 = myBlock2.offsetHeight;
+		if (window.innerWidth <= 620) shop.style.marginTop = blockHeight + 'px';
+
+		window.addEventListener("scroll", () => {
+		    if (Math.round(window.pageYOffset) >= blockHeight && myBlock2.style.position != "fixed") {
+		        shop.style.paddingTop = blockHeight2 + "px";
+		        myBlock2.style.position = "fixed";
+		        myBlock2.style.width = container.offsetWidth + 'px';
+		        
+		        
+		        if (window.innerWidth <= 620) {
+		            shop.style.paddingTop = blockHeight + "px";
+		            myBlock2.style.height = blockHeight + 'px';
+		        }
+		    }
+		    if(Math.round(window.pageYOffset) <= blockHeight && myBlock2.style.position != "relative") {
+		        myBlock2.style.position = "relative";
+		        shop.style.paddingTop = '0';
+		    }
+
+
+		});
+
+	</script>
+
+</body>
+
+</html>

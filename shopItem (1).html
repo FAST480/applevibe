@@ -16,7 +16,7 @@
 	<link type="text/css" rel="stylesheet" href="assets/css/lg-thumbnail.css">
 
 
-	<script src="assets/js/product.js" defer></script>
+
 	<script src="assets/js/preloader.js"></script>
 	<script src="assets/js/menu.js" defer></script>
 	<script src="assets/js/popup.js" defer></script>
@@ -119,12 +119,6 @@
 										<a href="assets/img/1-2.jpg" class="swiper-slide zoom__item zoom-container pz-Media">
 											<img class="zoom__image" src="assets/img/1-2.jpg" />
 										</a>
-										<a href="assets/img/1-2.jpg" class="swiper-slide zoom__item zoom-container pz-Media">
-											<img class="zoom__image" src="assets/img/1-2.jpg" />
-										</a>
-										<a href="assets/img/1-2.jpg" class="swiper-slide zoom__item zoom-container pz-Media">
-											<img class="zoom__image" src="assets/img/1-2.jpg" />
-										</a>
 									</div>
 
 									<!-- If we need navigation buttons -->
@@ -158,7 +152,7 @@
 
 							<div class="shopItem__maininfo__flex__buy">
 								<div class="shopItem__maininfo__offer__box">
-									<div class="shopItem__maininfo__offer__flex">
+									<div class="shopItem__maininfo__offer__flex" >
 <!-- 										<div class="shopItem__maininfo__offer__costBlock">
 											<div class="shopItem__maininfo__offer__costBlock__upper">
 												<p class="shopMain__item__cost__default">8999.99руб</p>
@@ -170,7 +164,7 @@
 										</div>
 										<div class="shopItem__maininfo__offer__costBlock">
 											<div class="shopItem__maininfo__offer__costBlock__upper2">
-												<p class="shopMain__item__cost__default">8999.99руб</p>
+											<p class="shopMain__item__cost__default">8999.99руб</p>
 												<div class="shopItem__maininfo__offer__costBlock__discost">
 													<p>9999.99руб</p>
 												</div>
@@ -193,7 +187,7 @@
 												в
 												один клик</a>
 										</div> -->
-										<div class="shopItem__maininfo__offer__costBlock">
+										<!-- <div class="shopItem__maininfo__offer__costBlock">
 											<div class="shopItem__maininfo__offer__costBlock__upper">
 												<a href="#" class="shopItem__maininfo__offer__costBlock__subcost" data-popup="popup__subAccess">
 													<p>7999.99руб</p>
@@ -209,7 +203,7 @@
 												data-popup="popup__buyproduct">Купить
 												в
 												один клик</a>
-										</div>
+										</div> -->
 										<a href="#" class="shopItem__maininfo__offer__gift">
 											<img src="assets/img/shop/gift.svg" alt="">
 											<p>Подарком</p>
@@ -217,7 +211,7 @@
 									</div>
 									<button class="shopItem__maininfo__offer__buy">Добавить в корзину</button>
 									<!-- ******************************* -->
-									<div class="shopItem__maininfo__offer__amount" style="display: none;">
+									<div style="display: none;" class="shopItem__maininfo__offer__amount">
 										<a href="#" class="shopItem__maininfo__offer__go">Перейти в корзину</a>
 										<div class="count">
 											<span class="change minus min">
@@ -228,7 +222,7 @@
 												<img src="assets/img/shop/plus.svg" alt="">
 											</span>
 										</div>
-										<a href="#" class="shopItem__maininfo__offer__delete">
+										<a href="#" class="shopItem__maininfo__offer__gift">
 											<img src="assets/img/shop/delete.svg">
 											<p>Удалить</p>
 										</a>
@@ -431,110 +425,6 @@
 
 
 	<style>
-		.swiper {
-			z-index: 0 !important;
-		}
-
-		.swiper {
-			width: 100%;
-			height: 100%;
-			border-radius: 10px;
-			overflow: hidden;
-		}
-
-		.swiper-button-next.swiper-button-disabled,
-		.swiper-button-prev.swiper-button-disabled {
-
-			pointer-events: auto !important;
-		}
-
-		.swiper-button-prev {
-			left: 0 !important;
-			top: 40% !important;
-			background: #0e0e0e3b;
-			height: 33% !important;
-			width: 10% !important;
-			border-radius: 0 10px 10px 0;
-
-			&::after {
-				color: rgba(0, 0, 0, 0.371);
-			}
-
-			&:hover {
-				background: #0e0e0e78;
-
-				&::after {
-					color: black;
-				}
-			}
-		}
-
-		.swiper-button-next {
-			right: 0 !important;
-			top: 40% !important;
-			background: #0e0e0e3b;
-			height: 33% !important;
-			width: 10% !important;
-			border-radius: 10px 0 0 10px;
-
-			&::after {
-				color: rgba(0, 0, 0, 0.371);
-			}
-
-			&:hover {
-				background: #0e0e0e78;
-
-				&::after {
-					color: black;
-				}
-			}
-		}
-
-		.swiper-wrapper {
-			img {
-				display: block;
-				width: 100%;
-				height: 100%;
-			}
-
-			a {
-				background: #FFF;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				width: 400px;
-				height: 500px;
-			}
-		}
-
-		.swiper-lg-wrap {
-			width: 1200px;
-			height: 0;
-			padding-bottom: 65%;
-			position: relative;
-			max-width: 100%;
-		}
-
-		.swiper-wrapper a {
-			border-radius: 20px;
-		}
-
-		.swiper-wrapper a {
-			height: auto;
-		}
-
-		.swiper-pagination {
-			position: sticky !important;
-		}
-
-		.swiper-pagination-bullet {
-			background: #FFF !important;
-		}
-
-		.swiper-pagination-bullet-active {
-			background: #FFF !important;
-		}
-
 		@media(max-width: 620px) {
 
 			.shopItem {

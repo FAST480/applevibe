@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="assets/css/admin.css">
 	<link rel="stylesheet" href="assets/css/adminmedia.css">
 	<script src="assets/js/menu.js" defer></script>
-	<script src="assets/js/adminPoup.js" defer></script>
+	<script src="assets/js/adminPopup.js" defer></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="assets/js/ajax.js"></script>
 </head>
@@ -79,7 +79,9 @@
 							<a href="/admin/user/delete/1" class="main__userActions__buttons__item" data-access>Выдать подписку</a>
 							<a href="#" class="main__userActions__buttons__item main__userActions__buttons__item--red" data-access>Удалить</a>
 						</div>
+						<a href="#" class="main__userActions__buttons__item" data-popup="popup__changeBalance" >Пополнить баланс</a>
 						<a href="/admin/user/giveadm/1" class="main__userActions__buttons__item" data-access>Выдать права администратора</a>
+
 					</div>
 				</div>
 			</div>
@@ -89,12 +91,27 @@
 
 
 	<div class="popup__delete popup__main">
-		<div class="popup__deleteBlock">
+		<div class="popup__deleteBlock popup__main__block">
 			<div class="popup__deleteBlock__question">Вы подтверждаете выполнение данного действия?</div>
 			<div class="popup__deleteBlock__buttons">
 				<a href="#" class="popup__deleteBlock__buttons--delete">Да</a>
 				<a href="#" class="popup__deleteBlock__buttons--cancel">Нет, я передумал</a>
 			</div>
+		</div>
+	</div>
+
+	<div class="popup__main popup__changeBalance active">
+		<div class="popup__main__block">
+			<form action="#" method="post">
+				<div class="popup__changeBalance__input">
+					<label>Введите сумму на которую хотите пополнить баланс пользователя:</label>
+					<input type="number" step="any" placeholder="1000">
+				</div>
+				<div class="popup__changeBalance__buttons">
+					<input type="submit" name="submit" value="Пополнить">
+					<a href="#" class="popup__main__cancelButton">Отмена</a>
+				</div>
+			</form>
 		</div>
 	</div>
 
