@@ -115,10 +115,18 @@ body {
   width: 100vw;
   overflow: hidden hidden;
 }
+body.noscroll {
+  overflow-y: hidden;
+}
 .wrapper {
   min-height: 100vh;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1 1 auto;
 }
 .container {
   max-width: 1070px;
@@ -313,7 +321,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 999;
+  z-index: 99999;
   visibility: hidden;
 }
 .popup.active {

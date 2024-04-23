@@ -2,6 +2,12 @@
   .container {
     max-width: 1170px;
   }
+  .profile__account__avatar {
+    flex: 0 0 60%;
+  }
+  .profile__main {
+    margin-right: 10px;
+  }
   .profile__user {
     flex: 0 0 300px;
   }
@@ -16,8 +22,8 @@
   .container {
     max-width: 960px;
   }
-  .profile__main {
-    margin-right: 10px;
+  .profile__account__avatar {
+    flex: 0 0 60%;
   }
   .profile__main__tariffs__body__item__info p {
     font-size: 16px;
@@ -25,13 +31,26 @@
   .profile__buys__list {
     grid-template-columns: repeat(2, 280px);
   }
+  .profile__favs__list {
+    grid-template-columns: repeat(2, 250px);
+  }
   .profile__buys__item__img {
     height: 240px;
+  }
+  .profile__account {
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
   }
 }
 @media (max-width: 960px) {
   .container {
     max-width: 800px;
+  }
+  .profile__favs__list {
+    grid-gap: 15px 40px;
+  }
+  .profile__account {
+    justify-content: space-between;
+    grid-template-rows: 0.5fr 0.5fr 0fr;
   }
   .profile__header {
     justify-content: space-between;
@@ -98,9 +117,11 @@
     padding: 100px 50px 0 50px;
     background: #0E0E0E;
     transition: right .5s;
+    z-index: 998;
   }
   .profile__sidebar.active {
     right: 0;
+    overflow-y: scroll;
   }
   .profile__buys__list {
     grid-template-columns: repeat(2, 340px);
@@ -116,6 +137,13 @@
   .container {
     max-width: 620px;
   }
+  .profile__account {
+    gap: 10px;
+    grid-template-rows: 0.5fr 0.5fr 0.6fr;
+  }
+  .profile__buys__list {
+    grid-template-columns: repeat(2, 280px);
+  }
   .profile__main__tariffs__body__item__info p {
     font-size: 14px;
   }
@@ -127,6 +155,31 @@
   }
 }
 @media (max-width: 620px) {
+  .profile__buys__list {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+  .profile__favs__list {
+    grid-template-columns: repeat(1, 250px);
+  }
+  .profile__account {
+    display: grid;
+    grid-template-rows: 1fr 0fr 1.1fr;
+    grid-template-columns: 0.65fr 0.35fr;
+    gap: 20px 20px;
+  }
+  .profile__account__avatar {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .profile__account__subscription {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .profile__account__userinfo__balance {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+  .profile__account__userinfo__box {
+    grid-area: 3 / 1 / 4 / 3;
+  }
   .container {
     max-width: 520px;
   }
@@ -185,23 +238,12 @@
     margin-left: 0;
     margin-top: 20px;
   }
-  .profile__account {
-    flex-direction: column;
-    align-items: center;
-  }
   .profile__account__userinfo {
     order: 2;
   }
-  .profile__account__avatar {
-    margin-top: 20px;
-    flex: 1 1 auto;
-    width: 220px;
-  }
   .profile__account__avatar__img {
-    height: 220px;
-  }
-  .profile__account {
-    padding-bottom: 100px;
+    width: 100%;
+    height: 100%;
   }
 }
 @media (max-width: 520px) {
@@ -211,6 +253,9 @@
   }
   .profile__user__avatar {
     margin-left: 10px;
+  }
+  .profile__account {
+    grid-template-rows: 1fr 0fr 1.2fr;
   }
   .profile__toMain {
     padding: 15px;
@@ -251,11 +296,17 @@
   .profile__account__userinfo__listitem span {
     font-size: 14px;
   }
+  .profile__account {
+    grid-template-rows: 1fr 0fr 1.4fr;
+  }
 }
 @media (max-width: 415px) {
   .profile__user {
     flex: 0 0 150px;
     padding: 10px;
+  }
+  .profile__account {
+    grid-template-rows: 1fr 0fr 1.4fr;
   }
   .profile__burgerInner {
     width: 55px;
@@ -271,18 +322,12 @@
     margin: 0px;
   }
 }
-@media (max-width: 400px) {
-  .profile__account__userinfo__listitem {
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
-  .profile__account__userinfo__listitem span {
-    margin-left: 0;
-  }
-}
 @media (max-width: 380px) {
   .profile__toMain {
     padding: 10px;
+  }
+  .profile__account {
+    grid-template-rows: 1fr 0fr 1.7fr;
   }
   .profile__user__name {
     font-size: 14px;
@@ -306,6 +351,13 @@
   }
 }
 @media (max-width: 350px) {
+  .profile__account__left__box {
+    gap: 20px;
+    justify-content: center;
+  }
+  .profile__account {
+    grid-template-rows: 1fr 0fr 2fr;
+  }
   .profile__user {
     padding: 15px 5px;
   }
@@ -322,5 +374,11 @@
   }
   .profile__main__sub__status {
     margin: 0 auto;
+  }
+  .profile__account__userinfo__input {
+    font-size: 14px;
+  }
+  .profile__account__userinfo__label {
+    font-size: 14px;
   }
 }
