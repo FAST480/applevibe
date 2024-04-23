@@ -1587,6 +1587,13 @@
   font-size: 16px;
   font-weight: 500;
   color: #fff;
+  display: flex;
+  align-items: center;
+}
+.category__name img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
 }
 .category__back {
   display: block;
